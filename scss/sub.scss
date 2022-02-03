@@ -1,0 +1,980 @@
+@charset "utf-8";
+@import "common";
+@media all and (min-width:769px){
+    html,body{position: relative;}
+    #search, .allMnwarp{top:0px;}
+    header{border-bottom: 1px solid #ddd}
+
+    .pageWarp{width: 1400px; margin: 0 auto;}
+    .pageTit{
+        margin: 130px 0px 60px;
+        h3{@include text(35px,$baseC,700,center,1);}
+        p{
+            margin: 20px 0px 10px;
+            @include text(18px,$baseC,400,left,1);
+            span{font-weight: 600;}
+            img{margin: 5px 10px 0px;}
+        }
+        hr.titLine{
+            width: 100%; height: 4px;
+            background: $baseC; border: 0;
+        }
+    }
+    #create, #artist, #ntcBoard, #qna, #memberTicket, #map 
+    {margin-bottom: 15%;}
+
+    #List{ width: 100%;
+        div.listWarp{
+            display: flex !important;
+            flex-wrap: wrap;
+        }  
+        div.perform{
+            width: 700px; height: 320px;
+            box-sizing: border-box;
+            margin-bottom: 80px;
+            hr{display: none;}
+            ul.inner{
+                width: 100%; height: 320px;
+                display: flex;
+                box-sizing: border-box;
+                li:first-child{width:240px; height: 320px;}
+                li:last-child{
+                    position: relative;
+                    width: 100%; height: 100%;
+                    margin-left: 30px;
+                    @include text(18px,$baseC,400,left,1);
+                    .pfGenre, .pfTime{margin-top: 20px;}
+                    h4{
+                        @include text(24px,$baseC,600,left,1); margin-top: 5px;
+                    }
+                    .pfPlace{
+                        position: absolute;
+                        bottom: 50px;
+                    }
+                    .pfDay{
+                        display: inline-block;
+                        color:$gray6; margin: 15px 0px;
+                    }
+                    .listBtn{
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+                        display: flex;
+                        >a{
+                            display: block;
+                            width:146px; height:47px;
+                            box-sizing: border-box;
+                            position: relative;
+                            img{
+                                vertical-align: middle;
+                                margin: -5px 5px 0px 0px;
+                            }
+                            &:hover img:nth-child(1) {display: none;}
+                            &:hover img:nth-child(2) {
+                                display: inline-block;
+                                @include trans(.4s);
+                            }
+                            img:nth-child(2),br{display: none;}
+                            &:nth-child(1){
+                                margin-right: 20px;
+                                border: 1px solid $pointC;
+                                @include text(16,$pointC,400,center,47px);
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    width: 0%; height: 100%;
+                                    position: absolute;
+                                    top: 0; right:0;
+                                    background: $pointC;
+                                    @include trans(.4s);
+                                }
+                                &:hover{
+                                    color: #fff;
+                                    &::after{
+                                        width: 100%;
+                                        z-index: -1;
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                border: 1px solid $baseC;
+                                @include text(16,$baseC,400,center,47px);
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    width: 0%; height: 100%;
+                                    position: absolute;
+                                    top: 0; right:0;
+                                    background: $baseC;
+                                    @include trans(.4s);
+                                }
+                                &:hover{
+                                    color: #fff;
+                                    &::after{
+                                        width: 100%;
+                                        z-index: -1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+    
+    #pageDetail{
+        width: 100%; margin-bottom: 60px;
+        >div.infoWarp{
+            >ul.deatilInfo{
+                display: flex;
+                >li:nth-child(1){width:510px; height:680px;}
+                >li:nth-child(2){
+                    margin-left: 70px;
+                    width: 100%;
+                    .pdGenre{@include text(20px,$baseC,400,left,1);}
+                    .pdlName{
+                        @include text(50px,$baseC,500,left,1);
+                        margin: 5px 0px 15px;
+                    }
+                    .pdPlace{
+                        @include text(20px,$baseC,400,left,1);
+                        .pdDay{
+                            display: inline-block;
+                            color:$gray6; 
+                            margin: 0px 0px 10px;
+                        }
+                    }
+                    hr{
+                        width: 100%; height: 1px;
+                        background: #ddd; border: 0;
+                        margin: 30px 0px;
+                    }
+                    .pdSchedule{
+                        li{
+                            display: flex;
+                            margin-bottom: 12px;
+                            >p:first-child{
+                                width:120px;
+                                @include text(16px,$baseC,500,left,1.6);
+                            }
+                            >p:last-child{
+                                @include text(16px,$gray6,400,left,1.6);
+                            }
+                        }
+                    }
+                    .pdAlert{
+                        display: flex;
+                        margin-top: 30px;
+                        br{display: none;}
+                        >li:last-child{
+                            margin: 3px 0px 0px 10px;
+                            @include text(14px,$pointCr2,400,left,1.5);
+                            letter-spacing: -0.5px;
+                        }
+                    }
+                    .detailBtn{
+                        margin-top: 45px;
+                        position: relative;
+                        display: flex;
+                        >a{
+                            display: block;
+                            width:280px; height:70px;
+                            box-sizing: border-box;
+                            position: relative;
+                            margin-right: 50px;
+                            border: 1px solid $baseC ;
+                            @include text(18px,$baseC ,500,center,70px);
+                            img{
+                                vertical-align: middle;
+                                position: absolute;
+                                right: 40px; top: 50%;
+                                transform: translateY(-50%);
+                            }
+                            &:hover img:nth-child(1) {display: none;}
+                            &:hover img:nth-child(2) {
+                                display: inline-block;
+                                @include trans(.4s);
+                            }
+                            img:nth-child(2),br{display: none;}
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 0%; height: 100%;
+                                position: absolute;
+                                top: 0; right:0;
+                                background: $pointCr2;
+                                @include trans(.3s);
+                            }
+                            &:hover{
+                                color: #fff; border: 1px solid $pointCr2;
+                                &::after{
+                                    width: 100%;
+                                    z-index: -1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        >div.conWarp{
+            width: 100%; height: 1400px;
+            margin-top: 100px;
+            hr{width:100%; height:4px;
+            background: $baseC; border: 0; margin: 0;}
+        }
+        .tab_menu{
+            width: 100%; height: 80px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            li{
+                width:150px; height: 70px;
+                @include text(20px,$baseC,400,center,80px);
+                cursor: pointer;
+                &.active{
+                    border-bottom:3px solid $pointCr2;
+                }
+            }
+        }
+        .tab_con{
+            width: 100%; height: 100%;
+            margin-top: 30px; 
+            position: relative;
+            div{
+                width: 100%; height: 100%;
+                background: #fff;
+                position: absolute;
+                &.active{z-index:999;}
+            }
+            #firstCon{
+                width: 100%; height: 100%;
+                background: #fff;
+                @include text(16px,$baseC,400,left,1.5);
+                >h4{font-weight: 600;//background: #fff;
+                }
+                >p{margin-bottom: 30px;}
+            }
+            #secondCon, #thirdCon, #fourthCon{
+                //width: 100%; height: 100%;
+                //background: #fff;
+                text-align: center;
+                img{width: 1000px;}
+            }
+        }
+    }
+    #lendGuide{
+        .lednPay{
+            th{@include text(16px,$baseC,600,center,50px);}
+            td{@include text(16px,$baseC,400,center,1.2);}
+        }
+    }
+    .lendCon, .createCon, .artistCon{        
+        p{@include text(16px,$baseC,400,left,1.5);}
+        .lendDown{@include text(16px,$baseC,400,center,35px);}
+    }
+    .guideList>li{@include text(16px,$baseC,400,left,2);}
+
+    .artistWarp{
+        width:100%;
+        .artistCon{
+            >ul{
+                >li{
+                    width:30%; height: 200px;
+                    margin-bottom: 80px;
+                    >div{margin-left: 40px;}
+                }
+            }
+        }
+    }
+
+    #ntcBoard{ width:100%;}
+    .ntcBoardSch{ width:100%; height:60px;
+        form{width: 100%;}
+        .nschTxt{ 
+            width:700px;
+            @include text(16px,$gray6,400,left,1);
+        }
+    }
+    .ntcBoardCon{
+        .ntcBoardList{
+            width: 100%;
+            tr{height: 60px; }
+            tr:first-child ~ tr td {border-top:1px solid #ddd;}
+            tr{
+                td:first-child {border-left:1px solid transparent;}
+                td:last-child {border-right:1px solid transparent}
+            }
+            tr:hover td {
+                border-top:1px solid $baseC;
+                border-bottom:1px solid $baseC;
+                &:first-child {border-left:1px solid $baseC;}
+                &:last-child {border-right:1px solid $baseC;}
+            }
+            tr:first-child ~ tr:hover td {border-top-color:$baseC;}
+            td{
+                &:first-child{width: 130px;}
+                &:nth-child(2){width: auto;}
+                &:last-child{width: 150px;}
+            }
+            td.num, td.date{
+                @include text(16px,$baseC,400,center,60px); position: relative;
+            }
+            td.tit{
+                @include text(16px,$baseC,400,left,60px);
+            }
+            .ntcbg{
+                width:70px; height:35px;
+                @include text(16px,#fff,400,center,35px);
+            }        
+        }
+    }
+    
+    
+    .qnaCon{
+        .qnaList{
+            width: 100%;             
+            .question{
+                @include text(16px,$baseC,400,left,60px);
+                padding-left: 50px;
+                &::before{padding-right: 50px;}
+                .qnaOpen{right: 50px;}
+            }
+            >.answer{
+                padding: 40px 145px; position: relative;
+                span{left: 115px;}
+            }
+        }
+    }
+
+    .memTiWarp{
+        br{display: none;}
+                
+            
+        
+    }
+
+    .mapCon{
+        >ul{
+            li{
+                >P:first-child{
+                    @include text(16px,$baseC,500,left,1);
+                }
+                >P:last-child{
+                    @include text(16px,$baseC,400,left,1);
+                    br{display: none;}
+                }
+            }
+        }
+    }
+
+
+    footer{position: relative; margin-top:0%;}
+}
+
+/*공통*/
+.pagenation{
+    margin: 50px 0px 100px;
+    .pager{
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        &>li.pageNum{
+            a{
+                display: block;
+                width: 40px; height: 40px;
+                @include text(18px,$baseC,500,center,40px);
+                background: #f0f0f0;
+                margin: 0px 10px;
+                &:hover,&:focus{
+                    background: $baseC; color: #fff;
+                }
+            }
+        }
+        &>.pagePrev, &>.pageNext{
+            a{
+                display: block;
+                width: 50px; height: 40px;
+                @include text(18px,$baseC,700,center,40px);
+                text-decoration: underline;
+            }
+            margin: 0px 25px;
+         }
+    }
+}
+
+.lendCon, .createCon, .artistCon, .ntcBoardCon, .memTiCon, .mapCon{
+    margin: 60px 0px;
+    .titBar{
+        width: 50px; height:5px; border: 0;
+        background: $baseC; margin: 50px 0px 15px; 
+    }
+    h4{
+        @include text(20px,$baseC,600,left,1);
+        margin: 15px 0px;
+    }
+}
+
+.lendWarp{
+    height: 1400px;
+    .lendDown{
+        display: inline-block; box-sizing: border-box;
+        width: 144px; height:35px;
+        margin: 10px 0 0;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        //@include text(16px,$baseC,400,center,35px);
+        img{margin: 8px 5px 0px 0px;}
+    }
+    .lednPay{ margin: 10px 0px 50px;
+        width: 100%;
+        border-top: 2px solid $baseC;
+        border-bottom: 2px solid $baseC;
+        border-collapse: collapse;
+        th, td{
+            height: 40px; border: 1px solid #ddd;
+            vertical-align: middle;
+        }
+        th:first-child{border-left: 0;}
+        th:last-child{border-right: 0;}
+        td:last-child{border-right: 0;}
+    }
+    
+}
+
+.lendTab{
+    width: 100%; height:70px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid $baseC;
+    position: relative;
+    >li{
+        width: 49%; height: 100%;
+        background: #f4f4f4;
+        box-sizing: border-box;
+        @include text(18px,$baseC,500,center,70px);
+        cursor: pointer;
+        &.active{
+            height: 74px;
+            background: #fff;
+            border-top: 3px solid $baseC;
+            border-left: 3px solid $baseC;
+            border-right: 3px solid $baseC;
+        }
+    }
+}
+.lendCon{
+    width: 100%; height: 100%;
+    position: relative;
+    >div{
+        width:100%; height: 100%;
+        background: #fff;
+        position: absolute;
+        &.active{z-index:999;}
+    }
+}
+
+.createWarp,.artistWarp{
+    >hr{width: 100%; height: 1px; 
+    background: #ddd; border: 0; margin: 50px 0px 0px;}
+    >img{width: 100%;}
+}
+
+.guideList>li::before{content: '※ ';}
+
+.artistWarp{
+    .artistCon{margin-top: 60px;
+        >ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            >li{display: flex;}
+        }
+    }
+}
+
+.ntcBoardWarp, .qnaWarp{position: relative;}
+
+.ntcBoardSch{
+    height:60px;
+    margin: 0 auto 60px; position: relative;
+    form{ 
+        height:100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    .nschTxt{ 
+        height: 60px; box-sizing: border-box; 
+        padding-left: 20px; outline: 0;
+    }
+    .nschImg{
+        margin-left: 15px;
+        position: absolute; top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.ntcBoardCon{
+    margin-bottom: 80px;
+    .ntcBoardList{
+        width: 100%;
+        border-top: 2px solid $baseC;
+        border-bottom: 2px solid $baseC;
+        caption{display: none;}
+        
+        .ntcbg{
+            display: inline-block;
+            background: $baseC; border-radius: 25px;
+        }        
+    }
+}
+
+.qnaCon{
+    >div:nth-child(2){position: relative;}
+    .qnaList{
+        border-top: 2px solid $baseC;
+        border-bottom: 2px solid $baseC;
+        width: 100%; //display: flex;
+        li{
+            border-top:1px solid transparent;
+            border-left:1px solid transparent;
+            border-right:1px solid transparent;
+            cursor: pointer;
+            &:hover{
+                border:1px solid $baseC;
+            }
+        }
+        .question{
+            width:100%; height: 100%; box-sizing: border-box;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            &::before{content: 'Q';}
+            .qnaOpen{position: absolute; top: 25px;}
+        }
+        >.answer{
+            width: 100%; box-sizing: border-box;
+            background: #f4f4f4;
+            padding: 40px 145px; position: relative;
+            span{position: absolute;}
+        }
+    }
+}
+
+.memTiWarp{ height: 680px;
+    .memTiTab{
+        width: 100%; height:70px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 4px solid $baseC;
+        position: relative;
+        >li{
+            width: 49%; height: 100%;
+            background: #f4f4f4;
+            box-sizing: border-box;
+            @include text(18px,$baseC,500,center,70px);
+            cursor: pointer;
+            &.active{
+                height: 74px;
+                background: #fff;
+                border-top: 3px solid $baseC;
+                border-left: 3px solid $baseC;
+                border-right: 3px solid $baseC;
+            }
+        }
+    }
+    
+    .memTiCon{
+        width: 100%; height: 100%;
+        position: relative;
+        >div{
+            width:100%; height: 100%;
+            background: #fff;
+            position: absolute;
+            &.active{z-index:999;}
+            p{line-height: 1.5;}
+        }
+    }
+}
+
+
+.mapCon{
+    >p.add{@include text(16px,$baseC,600,left,1);}
+    >hr.line{
+        width: 100%; height: 1px; margin: 0;
+        border: 0; background: #ddd;
+    }
+    >ul{
+        margin-bottom: 50px;
+        li{
+            display: flex; margin-top: 15px;
+            >P:first-child{width: 120px;}
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/*모바일*/
+@media all and (max-width:768px){
+    header{border-bottom: 1px solid $baseC;}
+    
+    .pageWarp{width: 100%;}
+    .pageTit{
+        margin: 110px 0px 50px;
+        position: relative;
+        h3{@include text(35px,$baseC,700,center,1);}
+        p{display: none;
+        }
+        hr.titLine{
+            width: 100%; height: 4px;
+            background: $baseC; border: 0;
+            margin-top: 30px;
+        }
+    }
+
+    .perform, .lendWarp, .createWarp, .artistWarp, .ntcBoardWarp,
+    .mapWrap, .qnaWarp, .memTiWarp{margin: 0px 30px;}
+        
+        
+    #List{
+        width: 100%;
+        .perform{
+            width: 100%;
+            box-sizing: border-box;
+            hr{ width: 100%; height: 1px; 
+                background: #ddd; border: 0;
+                margin: 50px 0px 40px;
+            }
+            ul.inner{
+                width: 100%; height: 320px;
+                display: flex;
+                box-sizing: border-box;
+                li:first-child{width:240px; height: 320px;}
+                li:last-child{
+                    position: relative;
+                    width: 100%; height: 100%;
+                    margin-left: 30px;
+                    @include text(18px,$baseC,400,left,1);
+                    .pfGenre, .pfTime{margin-top: 20px;}
+                    h4{
+                        @include text(24px,$baseC,600,left,1); margin-top: 5px;
+                    }
+                    .pfPlace{
+                        position: absolute;
+                        bottom: 5px;
+                    }
+                    .pfDay{
+                        display: inline-block;
+                        color:$gray6; margin: 15px 0px;
+                    }
+                }
+                .listBtn{
+                    position: absolute;
+                    top: 50%; right: 0;
+                    transform: translateY(-50%);
+                    a{
+                        display: block;
+                        width:85px; height:85px;
+                        border-radius: 50%;
+                        box-sizing: border-box;
+                        position: relative;
+                        img{margin: 20px auto 5px;}
+                        &:hover img:nth-child(1) {display: none;}
+                        &:hover img:nth-child(2) {
+                            display: inline-block;
+                            @include trans(.4s);
+                        }
+                        img:nth-child(2){display: none;}
+                        &:nth-child(1){
+                            border: 1px solid $pointC;
+                            @include text(16,$pointC,400,center,1);
+                            &:hover{
+                                color: #fff;
+                                background-color: $pointC;
+                            }
+                            margin-bottom: 30px;
+                        }
+                        &:nth-child(2){
+                            border: 1px solid $baseC;
+                            @include text(16,$baseC,400,center,1);
+                            &:hover{
+                                color: #fff;
+                                background-color: $baseC;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    #pageDetail{
+        width: 100%;
+        >div.infoWarp{
+            width: 100%; box-sizing: border-box;
+            >ul.deatilInfo{
+                >li:nth-child(1){
+                    width:100%; height:auto;
+                    margin-top: -50px; text-align: center;
+                    img{width:100%;}
+                }
+                >li:nth-child(2){
+                    box-sizing: border-box;
+                    margin: 30px 30px 0px;
+                    .pdGenre{@include text(20px,$baseC,400,left,1);}
+                    .pdlName{
+                        @include text(50px,$baseC,500,left,1);
+                        margin: 5px 0px 15px;
+                    }
+                    .pdPlace{
+                        @include text(20px,$baseC,400,left,1);
+                        .pdDay{
+                            display: inline-block;
+                            color:$gray6; 
+                            margin: 0px 0px 10px;
+                        }
+                    }
+                    hr{
+                        width: 100%; height: 1px;
+                        background: #ddd; border: 0;
+                        margin: 30px 0px;
+                    }
+                    .pdSchedule{
+                        li{
+                            display: flex;
+                            margin-bottom: 12px;
+                            >p:first-child{
+                                width:100px;
+                                @include text(16px,$baseC,500,left,1);
+                            }
+                            >p:last-child{
+                                @include text(16px,$gray6,400,left,1.6);
+                            }
+                        }
+                    }
+                    .pdAlert{
+                        display: flex;
+                        margin-top: 30px;
+                        >li:last-child{
+                            margin: 3px 0px 0px 10px;
+                            @include text(14px,$pointCr2,400,left,1.5);
+                        }
+                    }
+                    .detailBtn{
+                        margin-top: 45px;
+                        position: relative;
+                        >a{
+                            display: block;
+                            width:100%; height:70px;
+                            box-sizing: border-box;
+                            position: relative;
+                            margin-bottom: 10px;
+                            border: 1px solid $baseC ;
+                            @include text(18px,$baseC ,500,center,70px);
+                            img{
+                                vertical-align: middle;
+                                position: absolute;
+                                right: 40px; top: 50%;
+                                transform: translateY(-50%);
+                            }
+                            &:hover img:nth-child(1) {display: none;}
+                            &:hover img:nth-child(2) {
+                                display: inline-block;
+                                @include trans(.4s);
+                            }
+                            img:nth-child(2),br{display: none;}
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 0%; height: 100%;
+                                position: absolute;
+                                top: 0; right:0;
+                                background: $pointCr2;
+                                @include trans(.3s);
+                            }
+                            &:hover{
+                                color: #fff; border: 1px solid $pointCr2;
+                                &::after{
+                                    width: 100%;
+                                    z-index: -1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        >div.conWarp{
+            height: 1100px;
+            margin: 100px 30px 0px 30px; box-sizing: border-box;
+            hr{width:100%; height:4px;
+            background: $baseC; border: 0; margin: 0;}
+        }
+        .tab_menu{
+            width: 100%; height: 50px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            li{
+                width:25%; height: 60px;
+                @include text(18px,$baseC,400,center,70px);
+                cursor: pointer;
+                &.active{
+                    border-bottom:3px solid $pointCr2;
+                }
+            }
+        }
+        .tab_con{
+            width: 100%; height: 100%;
+            margin-top: 30px; 
+            position: relative;
+            div{
+                width: 100%; height: 100%;
+                background: #fff;
+                position: absolute;
+                &.active{z-index:999;}
+            }
+            #firstCon{
+                width: 100%; height: 100%;
+                background: #fff;
+                @include text(14px,$baseC,400,left,1.5);
+                >h4{font-weight: 600;//background: #fff;
+                }
+                >p{ width:85%;margin-bottom: 30px;}
+            }
+            #secondCon, #thirdCon, #fourthCon{
+                //width: 100%; height: 100%;
+                //background: #fff;
+                text-align: center;
+                img{width: 100%;}
+            }
+        }
+    }
+
+    #lendGuide, #create{
+        .lednPay{
+            th{@include text(15px,$baseC,600,center,50px);}
+            td{@include text(15px,$baseC,400,center,1.2);}
+        }
+        .guideList>li{@include text(15px,$baseC,400,left,2);}
+    }
+    .lendCon, .createCon, .memTiCon{
+        p{@include text(15px,$baseC,400,left,1.5);}
+        .lendDown{@include text(16px,$baseC,400,center,35px);}
+    }
+
+    .artistWarp{
+        .artistCon{
+            >ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                >li{
+                    width:44%; height: 100px;
+                    margin-bottom: 40px;
+                    >img{width:100px; height: 100px;}
+                    >div{
+                        margin-left: 15px;
+                        .titBar{
+                            width: 50px; height:5px; border: 0;
+                            background: $baseC; margin: 20px 0px 15px; 
+                        }
+                        h4{
+                            @include text(16px,$baseC,600,left,1);
+                            margin: 15px 0px 10px;
+                            p{@include text(14px,$baseC,400,left,1.5);}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ntcBoardSch{ height:60px;
+        form{width: 100%; height:100%;}
+        .nschTxt{ 
+            width:60%; 
+            @include text(15px,$gray6,400,left,1);
+        }
+    }
+    .ntcBoardCon{
+        .ntcBoardList{
+            tr{position: relative;}
+            tr:first-child ~ tr td:first-child, 
+            tr:first-child ~ tr td:nth-child(2)
+            {border-top:1px solid #ddd;}
+            tr{
+                td:first-child {border-left:1px solid transparent;}
+                td:last-child {border-right:1px solid transparent}
+            }
+            tr:hover td:first-child,tr:hover td:nth-child(2) {
+                border-top:1px solid $baseC;
+                border-bottom:1px solid $baseC;
+                &:first-child {border-left:1px solid $baseC;}
+                &:nth-child(2) {border-right:1px solid $baseC;}
+            }
+            tr:first-child ~ tr:hover td {border-top-color:$baseC;}
+            td{
+                &:first-child{width: 20%;}
+                &:nth-child(2){width: auto;}
+                &:last-child{width: auto;}
+            }
+            td.num, td.date{
+                @include text(14px,$baseC,400,center,60px); position: relative;
+            }
+            td.date{
+                position: absolute;
+                left: 20%; bottom: -18%;
+            }
+            td.tit{
+                @include text(14px,$baseC,400,left,-2);
+                position: relative;
+                >a{
+                    position: absolute;
+                    top:14px;
+                }
+            }
+            .ntcbg{
+                width:55px; height:30px; background: $baseC;
+                @include text(14px,#fff,400,center,30px);
+            }
+        }
+    }
+
+    .qnaCon{
+        .qnaList{
+            width: 100%;
+            .question{
+                @include text(15px,$baseC,400,left,60px);
+                padding-left: 20px;
+                &::before{padding-right: 15px;}
+                .qnaOpen{right: 20px;}
+            }
+            >.answer{
+                padding: 30px 50px; position: relative;
+                span{left: 25px;}
+            }
+        }
+    }
+
+    .mapCon{
+        >ul{
+            li{
+                >P:first-child{@include text(15px,$baseC,500,left,1);}
+                >P:last-child{@include text(15px,$baseC,400,left,1);}
+            }
+        }
+    }
+
+
+
+    footer{z-index: 9999; margin-top: 200px;}
+}

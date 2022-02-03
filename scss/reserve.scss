@@ -1,0 +1,412 @@
+@charset "utf-8";
+@import "common";
+
+body{
+    box-sizing: border-box;
+}
+div>h4{@include text(18px,$baseC,600,left,1);}
+
+#reserve{
+    width:950px; height: 750px;
+    //background: #ddd;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.tabMn{
+    width:100%; height: 60px;
+    .tabTit{
+        display: flex;
+        justify-content: space-around;
+        li{
+            width:25%; height: 60px;
+            @include text(18px,$baseC,500,center,60px);
+            border-right: 1px solid $baseC;            
+            border-bottom: 4px solid $baseC;
+            box-sizing: border-box;
+            &:last-child{border-right: 0;}
+            background: #ddd;
+        }
+    }
+}
+.tabTit>li.active{background: #fff;}
+.reserveWrap>div.active{z-index: 9999;}
+
+.reserveWrap{
+    position: relative;
+    box-sizing: border-box;
+    >div{
+        position:absolute;
+        overflow: hidden;
+    }
+}
+#reserve1, #reserve2, #reserve3, #reserve4{
+    width: 890px; height:630px;
+    background: #fff;
+    margin: 30px ;
+    box-sizing: border-box;
+}
+
+#reserve1{
+    .bookInfo{
+        width:100%;
+        display: flex;
+        margin-bottom: 30px;
+        >div:first-child{width:23%;}
+        >div:last-child{
+            width:77%;
+            h3{
+                @include text(24px,$baseC,600,left,1);
+                margin: 15px 0px 20px;
+            }
+            ul.bookData{
+                li{
+                    height: 50px;
+                    display: flex;
+                    border-bottom: 1px solid #ddd;
+                    p.bookTit{
+                        width:60px;
+                        @include text(16px,$baseC,500,left,50px);
+                        margin-left: 5px;
+                    }
+                    p.bookTxt{
+                        @include text(16px,$gray6,400,left,50px);
+                    }
+                }
+            }
+        }
+    }
+    .bookPick{
+        width: 100%; height: 300px;
+        border: 1px solid #ddd;
+        display: flex;
+        box-sizing: border-box;
+        h4{
+            width:100%; height:40px;
+            @include text(18px,$baseC,600,left,40px);
+            padding-left: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        .calendar{
+            width:50%;
+            border-right: 1px solid #ddd;
+            .calDate{
+                width:100%; height: 40px;
+                @include text(18px,$baseC,600,center,40px);
+            }
+            .calSelec{
+                .calTable{
+                    width:90%;
+                    margin: 0 auto;
+                    caption{display: none;}
+                    @include text(16px,$baseC,500,center,30px);
+                    .calSun,.calSun>a{color: #da3621;}
+                    .calSat,.calSat>a{color: #0d65ca;}
+                    .calMon{color: #999;}
+                    th,td{
+                        width: 57px; height: 30px;
+                        a{
+                            display: block;
+                            //width:30px; height: 30px;
+                            position: relative;
+                            &:hover,&:focus{color: #fff;
+                                &::after{
+                                content: '';
+                                display: block;
+                                width:30px; height:30px;
+                                position: absolute;
+                                top: 0%; left: 50%;
+                                transform: translateX(-50%);
+                                border-radius: 50%;
+                                background: $pointCr2; 
+                                z-index: -1;
+                                }
+                            }                            
+                        }
+                    }            
+                }
+            }
+        }
+        .pick{
+            width:50%;
+            .pickInfo{display: none;
+                li{ 
+                    border-bottom: 1px solid #ddd;
+                    box-sizing: border-box;
+                    a{
+                        display: block;
+                        width: 100%; height:100%;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: space-between;
+                        box-sizing: border-box;
+                        position: relative;
+                        span.pickNum{
+                        display: block;
+                        width: 15%; margin-left: 30px;
+                        @include text(16px,$baseC,500,left,40px);
+                        }
+                        span.pickTime{
+                            display: block;
+                            width: 65%; margin-left: 30px;
+                            @include text(16px,$baseC,500,left,40px);
+                        }
+                        span.pickSeat{
+                            display: block;
+                            width: 15%; margin-right: 30px;
+                            @include text(16px,$baseC,500,right,40px);
+                        }
+                        /*&:hover{
+                        border: 2px solid $pointCr2;
+                        color:$pointCr2;
+                        }*/
+                        &:hover,&:focus{
+                            &::after{
+                            content: '';
+                            display: block;
+                            width: 439px; height: 36px;
+                            position: absolute;
+                            top:0; left:0;
+                            z-index: -1;
+                            border: 2px solid $pointCr2;
+                            }
+                        }     
+                    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+#reserve2{
+    >div.seatSelec{
+        display: flex;
+        justify-content: space-between;
+        width: 100%; height: 100%;
+        .seatInfo{
+            width: 42%; height: 100%;
+            position: relative;
+            .seatGraed{
+                margin-bottom: 50px;
+                >div{
+                    margin-top: 15px;
+                    border: 1px solid #ddd;
+                    padding: 15px;
+                }
+            }
+            .seatResult{
+                >div{
+                    margin-top: 15px;
+                    border: 1px solid #ddd;
+                    width: 100%; height:120px;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    overflow-y: scroll;
+                    ul{
+                        li{display: none;
+                            width: 100%; height:40px;
+                            @include text(16px,$baseC,400,left,40px);
+                            //border-bottom: 1px solid #ddd;
+                            box-sizing: border-box;
+                            position: relative;
+                            padding-left: 30px;
+                            span{
+                                display:inline-block;
+                                width: 10px; height: 10px;
+                                margin-right: 5px;
+                            }
+                            img{
+                                position: absolute;
+                                right: 5%; top:50%;
+                                transform: translateY(-50%);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.seatColor{
+    width: 95%;
+    margin: 0 auto;
+    th{
+        @include text(16px,$baseC,600,left,1);height: 25px;
+        &:first-child{width: 75%;}
+        &:last-child{
+            width:25%; text-align: center;
+        }
+    }
+    td{
+        @include text(16px,$baseC,400,left,25px);
+        height: 25px;
+        &:first-child{
+            span{
+                &:first-child{display:inline-block;
+                    width: 10px; height: 10px;
+                    margin-right: 5px;
+                }&:last-child{
+                    @include text(15px,$pointCr2,400,left,25px);
+                    padding-left: 10px;
+                }
+                
+            }
+        }
+        &:last-child{text-align: right;}
+    }
+}
+.seatVip, .viewVip{background: #8080FF;}
+.seatVipv, .viewVipv{background: #76b9f0;}
+.seatR, .viewR{background: #FF0000;}
+.seatRv, .viewRv{background: #fd84b3;}
+.seatS, .viewS{background: #FF8000;}
+.seatSv, .viewSv{background: #fdf289;}
+.seatA, .viewA{background: #329687;}
+.seatAv, .viewAv{background: #8DCA10;}
+.viewSelec{background: $pointCr2 !important;}
+.viewYes{background: #555555;}
+.viewNo{background: #999;}
+
+
+
+#reserve3{
+    .personSelec{
+        margin-top: 15px;
+        box-sizing: border-box;
+        h5{
+            width: 100%; height:40px;
+            background: #ddd;
+            padding-left: 20px;
+            @include text(16px,$baseC,600,left,40px);
+            box-sizing: border-box;
+        }
+        .personVip, .personR{
+            width:100%; height:auto;
+            border: 1px solid #ddd;
+            &:last-child{border-bottom: 0;}
+            box-sizing: border-box;
+            margin-bottom: 40px;
+        }
+        .personInfo{
+            width:100%; height:auto;
+            display: flex;
+            >li{
+                width:100%; height:40px;
+                border-bottom: 1px solid #ddd;
+                @include text(16px,$baseC,400,left,40px);
+                box-sizing: border-box;
+                &:nth-child(1){
+                    width: 75%;
+                    padding-left: 20px;
+                }
+                &:nth-child(2){
+                    width: 15%;
+                    text-align: center;
+                }
+                &:nth-child(3){
+                    width: 10%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+#reserve4{
+    p{
+        @include text(16px,$baseC,400,left,1);
+        margin: 15px 0px 30px;
+    }
+}
+
+.r1BtnNext{
+    width:170px; height: 40px;
+    position: absolute;
+    right: 0; bottom: 0;
+    background: $pointCr2; 
+    a{
+        display: block;
+        width:100%; height: 100%;
+        @include text(18px,#fff,500,center,40px);
+    }
+}
+
+.rBtnWrap{
+    width: 100%; height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    .r2BtnPrev, .r3BtnPrev, .r4BtnPrev{
+        width:170px; height: 100%;
+        border: 1px solid #ddd; 
+        background: #fff;
+        margin-right: 25px;
+        box-sizing: border-box;
+        a{
+            display: block;
+            width:100%; height: 100%;
+            @include text(18px,$baseC,500,center,40px);
+        }
+    }
+    .r2BtnNext, .r3BtnNext, .r4BtnNext{
+        width:170px; height: 100%;
+        background: $pointCr2; 
+        a{
+            display: block;
+            width:100%; height: 100%;
+            @include text(18px,#fff,500,center,40px);
+        }
+    }
+}
+
+form label{display: none;}
+
+.seatPick{
+    width: 55%; height: 100%;
+    background: #eee;
+    padding: 30px;
+    box-sizing: border-box;
+    .spTit{
+        width: 100%; height: 60px;
+        background: #999;
+        @include text(24px,#fff,700,center,60px);
+        border-radius: 10px;
+    }
+    .spPicker{
+        width:95%; height: 30px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        >div{
+            @include text(18px,$baseC,400,leftr,30px);
+            box-sizing: border-box;
+            span{
+                display:inline-block;
+                width: 20px; height: 20px;
+                margin-right: 5px;
+                border-radius: 5px;
+                vertical-align: middle;
+            }
+        }
+    }
+    .spView{ 
+        width:95%; height: 440px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        .viewRow{
+            display: flex;
+            justify-content: space-between;
+            div{
+                width: 20px; height: 20px;
+                border-radius: 5px;
+                margin: 5px 0px;
+                cursor: pointer;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,725 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Pretendard', sans-serif;
+*/
+html {
+  color: #222;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Montserrat','Pretendard', sans-serif;
+}
+
+img {
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #222;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div > h4 {
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1;
+}
+
+#reserve {
+  width: 950px;
+  height: 750px;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.tabMn {
+  width: 100%;
+  height: 60px;
+}
+
+.tabMn .tabTit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tabMn .tabTit li {
+  width: 25%;
+  height: 60px;
+  font-size: 18px;
+  color: #222;
+  font-weight: 500;
+  text-align: center;
+  line-height: 60px;
+  border-right: 1px solid #222;
+  border-bottom: 4px solid #222;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ddd;
+}
+
+.tabMn .tabTit li:last-child {
+  border-right: 0;
+}
+
+.tabTit > li.active {
+  background: #fff;
+}
+
+.reserveWrap > div.active {
+  z-index: 9999;
+}
+
+.reserveWrap {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.reserveWrap > div {
+  position: absolute;
+  overflow: hidden;
+}
+
+#reserve1, #reserve2, #reserve3, #reserve4 {
+  width: 890px;
+  height: 630px;
+  background: #fff;
+  margin: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#reserve1 .bookInfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#reserve1 .bookInfo > div:first-child {
+  width: 23%;
+}
+
+#reserve1 .bookInfo > div:last-child {
+  width: 77%;
+}
+
+#reserve1 .bookInfo > div:last-child h3 {
+  font-size: 24px;
+  color: #222;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1;
+  margin: 15px 0px 20px;
+}
+
+#reserve1 .bookInfo > div:last-child ul.bookData li {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+#reserve1 .bookInfo > div:last-child ul.bookData li p.bookTit {
+  width: 60px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  text-align: left;
+  line-height: 50px;
+  margin-left: 5px;
+}
+
+#reserve1 .bookInfo > div:last-child ul.bookData li p.bookTxt {
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+  text-align: left;
+  line-height: 50px;
+}
+
+#reserve1 .bookPick {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#reserve1 .bookPick h4 {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+  text-align: left;
+  line-height: 40px;
+  padding-left: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+#reserve1 .bookPick .calendar {
+  width: 50%;
+  border-right: 1px solid #ddd;
+}
+
+#reserve1 .bookPick .calendar .calDate {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+}
+
+#reserve1 .bookPick .calendar .calSelec .calTable {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  text-align: center;
+  line-height: 30px;
+}
+
+#reserve1 .bookPick .calendar .calSelec .calTable caption {
+  display: none;
+}
+
+#reserve1 .bookPick .calendar .calSelec .calTable .calSun, #reserve1 .bookPick .calendar .calSelec .calTable .calSun > a {
+  color: #da3621;
+}
+
+#reserve1 .bookPick .calendar .calSelec .calTable .calSat, #reserve1 .bookPick .calendar .calSelec .calTable .calSat > a {
+  color: #0d65ca;
+}
+
+#reserve1 .bookPick .calendar .calSelec .calTable .calMon {
+  color: #999;
+}
+
+#reserve1 .bookPick .calendar .calSelec .calTable th, #reserve1 .bookPick .calendar .calSelec .calTable td {
+  width: 57px;
+  height: 30px;
+}
+
+#reserve1 .bookPick .calendar .calSelec .calTable th a, #reserve1 .bookPick .calendar .calSelec .calTable td a {
+  display: block;
+  position: relative;
+}
+
+#reserve1 .bookPick .calendar .calSelec .calTable th a:hover, #reserve1 .bookPick .calendar .calSelec .calTable th a:focus, #reserve1 .bookPick .calendar .calSelec .calTable td a:hover, #reserve1 .bookPick .calendar .calSelec .calTable td a:focus {
+  color: #fff;
+}
+
+#reserve1 .bookPick .calendar .calSelec .calTable th a:hover::after, #reserve1 .bookPick .calendar .calSelec .calTable th a:focus::after, #reserve1 .bookPick .calendar .calSelec .calTable td a:hover::after, #reserve1 .bookPick .calendar .calSelec .calTable td a:focus::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50%;
+  background: #f42539;
+  z-index: -1;
+}
+
+#reserve1 .bookPick .pick {
+  width: 50%;
+}
+
+#reserve1 .bookPick .pick .pickInfo {
+  display: none;
+}
+
+#reserve1 .bookPick .pick .pickInfo li {
+  border-bottom: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#reserve1 .bookPick .pick .pickInfo li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  /*&:hover{
+                        border: 2px solid $pointCr2;
+                        color:$pointCr2;
+                        }*/
+}
+
+#reserve1 .bookPick .pick .pickInfo li a span.pickNum {
+  display: block;
+  width: 15%;
+  margin-left: 30px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  text-align: left;
+  line-height: 40px;
+}
+
+#reserve1 .bookPick .pick .pickInfo li a span.pickTime {
+  display: block;
+  width: 65%;
+  margin-left: 30px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  text-align: left;
+  line-height: 40px;
+}
+
+#reserve1 .bookPick .pick .pickInfo li a span.pickSeat {
+  display: block;
+  width: 15%;
+  margin-right: 30px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  text-align: right;
+  line-height: 40px;
+}
+
+#reserve1 .bookPick .pick .pickInfo li a:hover::after, #reserve1 .bookPick .pick .pickInfo li a:focus::after {
+  content: '';
+  display: block;
+  width: 439px;
+  height: 36px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border: 2px solid #f42539;
+}
+
+#reserve2 > div.seatSelec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+#reserve2 > div.seatSelec .seatInfo {
+  width: 42%;
+  height: 100%;
+  position: relative;
+}
+
+#reserve2 > div.seatSelec .seatInfo .seatGraed {
+  margin-bottom: 50px;
+}
+
+#reserve2 > div.seatSelec .seatInfo .seatGraed > div {
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+#reserve2 > div.seatSelec .seatInfo .seatResult > div {
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 120px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+#reserve2 > div.seatSelec .seatInfo .seatResult > div ul li {
+  display: none;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 400;
+  text-align: left;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  padding-left: 30px;
+}
+
+#reserve2 > div.seatSelec .seatInfo .seatResult > div ul li span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+#reserve2 > div.seatSelec .seatInfo .seatResult > div ul li img {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.seatColor {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.seatColor th {
+  font-size: 16px;
+  color: #222;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1;
+  height: 25px;
+}
+
+.seatColor th:first-child {
+  width: 75%;
+}
+
+.seatColor th:last-child {
+  width: 25%;
+  text-align: center;
+}
+
+.seatColor td {
+  font-size: 16px;
+  color: #222;
+  font-weight: 400;
+  text-align: left;
+  line-height: 25px;
+  height: 25px;
+}
+
+.seatColor td:first-child span:first-child {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.seatColor td:first-child span:last-child {
+  font-size: 15px;
+  color: #f42539;
+  font-weight: 400;
+  text-align: left;
+  line-height: 25px;
+  padding-left: 10px;
+}
+
+.seatColor td:last-child {
+  text-align: right;
+}
+
+.seatVip, .viewVip {
+  background: #8080FF;
+}
+
+.seatVipv, .viewVipv {
+  background: #76b9f0;
+}
+
+.seatR, .viewR {
+  background: #FF0000;
+}
+
+.seatRv, .viewRv {
+  background: #fd84b3;
+}
+
+.seatS, .viewS {
+  background: #FF8000;
+}
+
+.seatSv, .viewSv {
+  background: #fdf289;
+}
+
+.seatA, .viewA {
+  background: #329687;
+}
+
+.seatAv, .viewAv {
+  background: #8DCA10;
+}
+
+.viewSelec {
+  background: #f42539 !important;
+}
+
+.viewYes {
+  background: #555555;
+}
+
+.viewNo {
+  background: #999;
+}
+
+#reserve3 .personSelec {
+  margin-top: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#reserve3 .personSelec h5 {
+  width: 100%;
+  height: 40px;
+  background: #ddd;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 600;
+  text-align: left;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#reserve3 .personSelec .personVip, #reserve3 .personSelec .personR {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+#reserve3 .personSelec .personVip:last-child, #reserve3 .personSelec .personR:last-child {
+  border-bottom: 0;
+}
+
+#reserve3 .personSelec .personInfo {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#reserve3 .personSelec .personInfo > li {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  color: #222;
+  font-weight: 400;
+  text-align: left;
+  line-height: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#reserve3 .personSelec .personInfo > li:nth-child(1) {
+  width: 75%;
+  padding-left: 20px;
+}
+
+#reserve3 .personSelec .personInfo > li:nth-child(2) {
+  width: 15%;
+  text-align: center;
+}
+
+#reserve3 .personSelec .personInfo > li:nth-child(3) {
+  width: 10%;
+  text-align: center;
+}
+
+#reserve4 p {
+  font-size: 16px;
+  color: #222;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1;
+  margin: 15px 0px 30px;
+}
+
+.r1BtnNext {
+  width: 170px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #f42539;
+}
+
+.r1BtnNext a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+}
+
+.rBtnWrap {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+
+.rBtnWrap .r2BtnPrev, .rBtnWrap .r3BtnPrev, .rBtnWrap .r4BtnPrev {
+  width: 170px;
+  height: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+  margin-right: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.rBtnWrap .r2BtnPrev a, .rBtnWrap .r3BtnPrev a, .rBtnWrap .r4BtnPrev a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  color: #222;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+}
+
+.rBtnWrap .r2BtnNext, .rBtnWrap .r3BtnNext, .rBtnWrap .r4BtnNext {
+  width: 170px;
+  height: 100%;
+  background: #f42539;
+}
+
+.rBtnWrap .r2BtnNext a, .rBtnWrap .r3BtnNext a, .rBtnWrap .r4BtnNext a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+}
+
+form label {
+  display: none;
+}
+
+.seatPick {
+  width: 55%;
+  height: 100%;
+  background: #eee;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.seatPick .spTit {
+  width: 100%;
+  height: 60px;
+  background: #999;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 10px;
+}
+
+.seatPick .spPicker {
+  width: 95%;
+  height: 30px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.seatPick .spPicker > div {
+  font-size: 18px;
+  color: #222;
+  font-weight: 400;
+  text-align: leftr;
+  line-height: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.seatPick .spPicker > div span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.seatPick .spView {
+  width: 95%;
+  height: 440px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.seatPick .spView .viewRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.seatPick .spView .viewRow div {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin: 5px 0px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=reserve.css.map */

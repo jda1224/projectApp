@@ -1,0 +1,145 @@
+@import "common";
+@import "pc";
+@import "mobile";
+
+section{
+    &>h2{
+        display: none;
+    }
+}
+div>h3, section>h3{
+    @include text(30px,$baseC,600,left,1);
+}
+
+#recent{
+    position: relative;
+}
+
+#mainIconMn{
+    margin-top: 100px;
+    width: 90%;
+    .iconMn{
+        display: flex;
+        justify-content: space-between;
+        li{
+            a{
+                p{
+                    @include text(16px,$baseC,400,center,1);
+                    margin-top: 20px;
+                }
+            }    
+        }
+    }
+}
+
+#notice{
+    margin-top: 100px;
+    >div{
+        margin-top: 40px;
+        .notcCon{
+            li{
+                box-sizing: border-box;
+                position: relative;
+                span{
+                    @include text(16px,$gray6,400,left,30px);
+                }
+            }
+        }
+        .bntNotc{
+            a{
+                background: rgba(0,0,0,.5);
+                position: relative;
+                img{
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                &:hover{background: rgba(0,0,0,.6);}
+            }
+        }
+    }
+}
+
+footer{
+    width:100%;
+    z-index: 9999; 
+    >div{
+        position: relative;
+        &:after{@include clear;}
+        .btnTop{
+            width: 90px; height: 50px;
+            background: rgba(0,0,0,.3);
+            a{
+                display: block;
+                width:100%; height: 100%;
+                @include text(20px,#fff,500,center,50px);
+                img{vertical-align: middle; margin-top: -5px;}
+            }
+        }
+        .fLink{
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            width:100%; height: 80px;
+            position: relative;
+            background: white;
+            .fLinkCon{
+                width: 80%;
+                display: flex;
+                margin-left: 30px;
+            }
+        }
+        .fInfo{
+            background: white;
+            >div:first-child{
+                margin: 30px 0px 0px 30px;
+                >p:first-child{
+                    >span:first-child{
+                        padding-right: 20px;
+                        border-right: 1px solid #ccc;}
+                    >span:last-child{margin-left: 20px;}
+                }
+                address{margin: 20px 0px;}
+                >p:last-child{font-size: 14px;}
+            }
+        }
+    }
+}
+
+#search{
+    width:100%;
+    height:150px;
+    background:rgba(255,255,255,.9);
+    z-index:99999;
+    position:absolute;
+    display:none;
+    form {
+        margin:0 auto;
+        text-align:center;
+        position:absolute;
+        top:25%; left:50%;
+        transform:translateX(-50%);
+    }
+    .schTxt{
+        width:50%; height:30px;
+        border:0;
+        border-bottom:3px solid #333;
+        box-sizing:content-box;
+        font-size:16px;
+        outline: 0;
+    }
+    .schImg{
+        width:26px;
+        vertical-align:middle;
+        margin-left:10px;
+    }
+    .btn_close{
+        position:absolute;
+        left:50%; bottom:10%;
+        transform:translateX(-50%);
+        background:#f42539;
+        padding:10px 30px;
+        color:#fff;
+        font-size:15px;
+        cursor:pointer;
+    }
+}
