@@ -40,7 +40,7 @@
                 img{width: 100%;}
             }
             .gnb{
-                width: 50%;
+                width: 960px;
                 display: flex;
                 justify-content: center;
                 background: #fff;
@@ -386,13 +386,16 @@
                 align-items: center;
                 .fLinkCon{
                     li{
-                        margin-right: 100px;
+                        margin-right: 60px;
+                        width: 54px;
                         a{
-                            display: block;
+                            display: block; width: inherit;
                             @include text(16px,$baseC,500,center,80px);
+                            letter-spacing: -0.5px;
                             &:hover{text-decoration: underline;}
                         }
                     }
+                    >li:nth-child(3),li:nth-child(4){width:124px;}
                 }
                 .snsIcon{
                     width: 20%;
