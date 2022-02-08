@@ -14,6 +14,7 @@ $(".mallMn").click(function(){
     //$(".gnb").slideToggle(400);
 });
 
+  
 
 //메인비주얼 슬라이드
 var n = 0;
@@ -96,19 +97,6 @@ $(function(){
 });
 
 
-//예매하기 팝업
-function resev(){
-    window.open("./r1.html",'_blank','width=951, height=752',false);
-}
-
-//예매하기
-$(".calTable td a").click(function(){
-    $(".pickInfo").show();
-    //$(this).css({"background-color": "#f42539", "color": "#fff"});
-});
-
-
-
 $(function(){
     $(".r1BtnNext>a").click(function(){
         //alert();
@@ -154,48 +142,50 @@ $(function(){
     });
 });
 //".viewRow>div.viewYes, .viewVip, .viewVipv, .viewR, .viewRv, .viewS, .viewSv, .viewA, .viewAv"
-$(".viewVip").click(function(){
-    $(this).toggleClass("viewSelec");
-    $(".resultV").show();
-});
+$(function(){
+    $(".viewVip").click(function(){
+        $(this).toggleClass("viewSelec");
+        $(".resultV").show();
+    });
 
-$(".viewVipv").click(function(){
-    $(this).toggleClass("viewSelec");
-    $(".resultVv").show();
-});
+    $(".viewVipv").click(function(){
+        $(this).toggleClass("viewSelec");
+        $(".resultVv").show();
+    });
 
-$(".viewR").click(function(){
-    $(this).toggleClass("viewSelec");
-    $(".resultR").show();
-});
+    $(".viewR").click(function(){
+        $(this).toggleClass("viewSelec");
+        $(".resultR").show();
+    });
 
-$(".viewRv").click(function(){
-    $(this).toggleClass("viewSelec");
-    $(".resultRv").show();
-});
+    $(".viewRv").click(function(){
+        $(this).toggleClass("viewSelec");
+        $(".resultRv").show();
+    });
 
-$(".viewS").click(function(){
-    $(this).toggleClass("viewSelec");
-    $(".resultS").show();
-});
+    $(".viewS").click(function(){
+        $(this).toggleClass("viewSelec");
+        $(".resultS").show();
+    });
 
-$(".viewSv").click(function(){
-    $(this).toggleClass("viewSelec");
-    $(".resultSv").show();
-});
+    $(".viewSv").click(function(){
+        $(this).toggleClass("viewSelec");
+        $(".resultSv").show();
+    });
 
-$(".viewA").click(function(){
-    $(this).toggleClass("viewSelec");
-    $(".resultA").show();
-});
+    $(".viewA").click(function(){
+        $(this).toggleClass("viewSelec");
+        $(".resultA").show();
+    });
 
-$(".viewAv, .viewYes").click(function(){
-    $(this).toggleClass("viewSelec");
-    $(".resultAv").show();
-});
+    $(".viewAv, .viewYes").click(function(){
+        $(this).toggleClass("viewSelec");
+        $(".resultAv").show();
+    });
 
-$(".seatResult li img").click(function(){
-    $(".seatResult li").hide();
+    $(".seatResult li img").click(function(){
+        $(".seatResult li").hide();
+    });
 });
 
 
@@ -232,7 +222,8 @@ $(function(){
 });
 
 
-//대관안내, 회원예매안내, 아이디/비밀번호 찾기
+// 탭버튼 - 대관안내, 회원예매안내, 아이디/비밀번호 찾기, 
+// 마이페이지, 개인정보처리방침 등
 $(function(){
     $("ul.lendTab>li").click(function(){
         $(this).siblings("li").removeClass("active");
@@ -270,14 +261,44 @@ $(function(){
             $("#aFindSecond").addClass("active");
         }
     });
+    $("ul.mypageTab>li").click(function(){
+        $(this).siblings("li").removeClass("active");
+        $(this).addClass("active");
+        var idx = $(this).index();
+        if(idx == 0){
+            $(".mpContentsCon>div").removeClass("active");
+            $("#userInfo").addClass("active");
+        } else if(idx == 1){
+            $(".mpContentsCon>div").removeClass("active");
+            $("#bookHistory").addClass("active");
+        } else{
+            $(".mpContentsCon>div").removeClass("active");
+            $("#artistRegist").addClass("active");
+        }
+    });
+    $("ul.personalTab>li").click(function(){
+        $(this).siblings("li").removeClass("active");
+        $(this).addClass("active");
+        var idx = $(this).index();
+        if(idx == 0){
+            $(".personalCon>div").removeClass("active");
+            $("#personal1").addClass("active");
+        } else if(idx == 1){
+            $(".personalCon>div").removeClass("active");
+            $("#personal2").addClass("active");
+        } else{
+            $(".personalCon>div").removeClass("active");
+            $("#personal3").addClass("active");
+        }
+    });
 });
+
 
 
 // 자주묻는질문 qna
 $(".answer").hide();
 $("li.question").click(function(){
     $(this).next().slideToggle(400);
-
 });
 
 var flag = false;
@@ -292,3 +313,40 @@ $(".qnaList>li").click(function(){
     
 });
 
+
+// 팝업 - 예매하기
+function resev(){
+    window.open('./r1.html','_blank','width=951,height=752');
+}
+
+//예매하기
+$(".calTable td a").click(function(){
+    $(".pickInfo").show();
+});
+
+//  팝업 - 공연일정
+function program(){
+    window.open('./program.html','_blank','width=840,height=715,top=100,left=200,resizable=no,scrollbars=no');
+}
+
+// 이메일무단수집거부
+/*
+$(function(){
+    $(".fLinkCon>li:nth-child(3)").click(function(){
+        $(".emailPopBG").show();
+    });
+    $(".emailclose").click(function(){
+        $("#emailPopBG").hide();
+    });
+});
+*/
+function openModal(emailPopup){
+  document.get
+  $(".emailPopBG").fadeIn(300);
+  $("."+emailPopup).fadeIn(300);
+}
+
+$(".emailPopBG, .emailclose").on('click',function(){
+  $(".emailPopBG").fadeOut(300);
+  $(".emailPopWrap").fadeOut(300);
+});

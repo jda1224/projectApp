@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=""/>
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <title>마이페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+    <link href="./css/member.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header id="header">
+    <div class="headWarp">
+        <div class="allMn" id="mallMn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mallMn" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <h1><a href="./index.html"><img src="./images/logo.svg" alt="LOGO" /></a></h1>
+        <ul class="gnb">
+            <div class="gnbMnUtil">
+                <ul class="gnbMnUtilCon">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">두다아트센터 일정</a></li>
+                </ul>
+            </div>
+            <li><a href="#">두다재단</a>
+                <ul class="submenu">
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">시설안내</a></li>
+                    <li><a href="#">좌석배치도</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">공연</a>
+                <ul class="submenu">
+                    <li><a href="./sg1.html">공연 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">전시</a>
+                <ul class="submenu">
+                    <li><a href="./sg1.html">전시 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./l1.html">대관</a>
+                <ul class="submenu">
+                    <li><a href="./l1.html">대관 안내</a></li>
+                </ul>
+            </li>
+            <li><a href="./m1_1.html">창작자 지원</a>
+                <ul class="submenu">
+                    <li><a href="./m1_1.html">창작 예술상</a></li>
+                    <li><a href="./m1_2.html">DOODA ARTIST</a></li>
+                </ul>
+            </li>
+            <li><a href="./c1_1.html">고객센터</a>
+                <ul class="submenu">
+                    <li><a href="./c1_1.html">공지사항</a></li>
+                    <li><a href="./c1_2.html">자주묻는 질문</a></li>
+                    <li><a href="./c1_3.html">회원/예매안내</a></li>
+                    <li><a href="./c1_4.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="util">
+            <li><a href="#"><img src="./images/top_icon01.png" alt="myPage" /></a></li>
+            <li><a href="#"><img src="./images/top_icon02.png" alt="contact" /></a></li>
+            <li><a href="#"><img src="./images/top_icon03.png" alt="list" /></a></li>
+            <li><a href="#"><img src="./images/top_icon04.png" alt="en" /></a></li>
+            <li><a href="#"><img src="./images/top_icon05.png" alt="serach" /></a></li>
+        </ul>
+    </div>
+</header>
+<div class="allMnwarp">
+    <div>
+        <div class="allMnUtil">
+            <ul class="allMnUtilCon">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">두다아트센터 일정</a></li>
+            </ul>
+        </div>
+        <ul class="allMnGnb">
+            <li><a href="#">두다재단</a>
+                <ul class="allMnSubmn">
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">시설안내</a></li>
+                    <li><a href="#">좌석배치도</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">공연</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./sg1.html">공연 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">전시</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./sg1.html">전시 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./l1.html">대관</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./l1.html">대관 안내</a></li>
+                </ul>
+            </li>
+            <li><a href="./m1_1.html">창작자 지원</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./m1_1.html">창작 예술상</a></li>
+                    <li><a href="./m1_2.html">DOODA ARTIST</a></li>
+                </ul>
+            </li>
+            <li><a href="./c1_1.htm">고객센터</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./c1_1.html">공지사항</a></li>
+                    <li><a href="./c1_2.html">자주묻는 질문</a></li>
+                    <li><a href="./c1_3.html">회원/예매안내</a></li>
+                    <li><a href="./c1_4.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="search">
+	<div class="searchWrap">
+		<form method="" action="" name="sch">
+			<input type="text" name="t_sch" value="" placeholder="검색어를 입력하세요." class="schTxt"/>
+			<input type="image" src="./images/search.png" alt="검색" class="schImg">
+		</form>
+		<div class="btn_close">x 닫기</div>
+	</div>
+</div>
+
+<div class="pageWarp">
+<section class="pageTit">
+<h2>페이지타이틀</h2>
+    <h3>마이페이지</h3>
+    <p>마이페이지</p>
+    <hr class="titLine"/>
+</section>
+
+<section id="mypageContents">
+<h2>마이페이지</h2>
+    <div class="mpContentsWarp">
+        <ul class="mypageTab">
+            <li class="active">회원정보수정</li>
+            <li>예매내역</li>
+            <li>예술인등록</li>
+        </ul>
+        <div class="mpContentsCon">
+            <div id="userInfo"  class="active" data-toggle="tab">
+                <div class="infoInput">
+                    <div class="joinId">
+                        <label for="id" class="tit" >아이디</label><br/>
+                        <input type="text" id="id" name="id" disabled>
+                    </div>
+                    <div class="joinPw">
+                        <div class="pw1">
+                            <label for="pw1" class="tit">비밀번호</label><br/>
+                            <input type="password" id="pw1" name="pw1">
+                            <p>영문, 숫자,특수문자 8자~12자 이내, 공백 불가/ 영문 대소문자 구분</p>
+                        </div>
+                        <div class="pw2">
+                            <label for="pw2" class="tit">비밀번호 확인</label><br/>
+                            <input type="password" id="pw2" name="pw2">
+                            <p>비밀번호 일치 확인</p>
+                        </div>
+                    </div>
+                    <div class="joinNameSex">
+                        <div class="joinname">
+                            <label for="name" class="tit">이름</label><br/>
+                            <input type="text" id="name" name="name" disabled>
+                        </div>
+                        <div class="joinsex">
+                            <label for="sex" class="tit">성별</label><br/>
+                            <input type="radio" name="sex" id="woman" disabled>
+                            <label for="woman">여자</label>
+                            <input type="radio" name="sex" id="man" disabled>
+                            <label for="man">남자</label>
+                        </div>
+                    </div>
+                    <div class="joinBirth">
+                        <label for="birth" class="tit">생년월일</label><br/>
+                        <input type="text" id="birth" name="birth" disabled>
+                    </div>
+                    <div class="joinPhone">
+                        <label for="phone" class="tit">휴대폰번호</label><br/>
+                        <input type="tel" id="phone" name="phone1"> - 
+                        <input type="tel" id="phone" name="phone2"> - 
+                        <input type="tel" id="phone" name="phone3">
+                    </div>
+                    <div class="joinAddr">
+                        <label for="addr" class="tit">주소</label><br/>
+                        <input type="text" id="addr" name="addr"><a href="#." class="confirm">우편번호검색</a><br/>
+                        <div class="addSub">
+                            <input type="text" id="addr" name="addr2" />
+                            <input type="text" id="addr" name="addr3" />
+                        </div>
+                    </div>
+                    <div class="joinSms">
+                        <label for="sms" class="tit">SMS 수신동의</label><br/>
+                        <input type="radio" name="sms" id="smsyes">
+                        <label for="smsyes">예</label>
+                        <input type="radio" name="sms" id="smsno">
+                        <label for="smsno">아니오</label>
+                    </div>
+                    <div class="joinEmail">
+                        <label for="email" class="tit">이메일 수신동의
+                        </label><br/>
+                        <input type="radio" name="email" id="emailyes">
+                        <label for="emailyes">예</label>
+                        <input type="radio" name="email" id="emailno">
+                        <label for="emailno">아니오</label>
+                    </div>
+                </div>  
+                <div class="joinBtn">
+                    <a href="#." class="agreeYes">정보수정</a>
+                    <a href="#." class="agreeNo">취소</a>
+                    <a href="#." class="agreeNo">회원탈퇴</a>
+                </div>
+            </div>
+            <div id="bookHistory" data-toggle="tab">
+                <div>
+                    <p>&rtrif; 예매확인 및 취소내역을 조회할 수 있습니다.</p>
+                    <div class="dateForm">
+                        <p>조회기간 선택</p>
+                        <form method="get" action="#" name="prexdateSelect" id="prexdateSelect">
+                            <select name="prevYear" id="prevYear">
+                                <option>2022</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                                <option>2019</option>
+                                <option>2018</option>
+                            </select>
+                            <label for="prevYear">년</label>
+                            <select name="prevMonth" id="prevMonth">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                            <label for="prevMonth">월</label>
+                            <select name="prevDay" id="prevDay">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                            <label for="prevDay">일</label>
+                        </form>
+                        <span>~</span>
+                        <form method="get" action="#" name="nextdateSelect" id="nextdateSelect">
+                            <select name="nextvYear" id="nextYear">
+                                <option>2022</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                                <option>2019</option>
+                                <option>2018</option>
+                            </select>
+                            <label for="nextvYear">년</label>
+                            
+                            <select name="nextMonth" id="nextMonth">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                            <label for="nextMonth">월</label>
+                            
+                            <select name="nextDay" id="nextDay">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                            <label for="nextDay">일</label>
+                        </form>
+                        <div class="dateInquiry">
+                            <a href="#.">조회</a>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="historyList">                    
+                    <div class="historyNow">
+                        <h3>뮤지컬 &lt;레베카&gt;</h3>
+                        <ul>
+                            <li>
+                                <p class="hTit">예매일</p>
+                                <p class="hTxt">2022. 01. 01</p>
+                            </li>
+                            <li>
+                                <p class="hTit">결제금액</p>
+                                <p class="hTxt">100,000원</p>
+                            </li>
+                            <li>
+                                <p class="hTit">예매번호</p>
+                                <p class="hTxt">T00010002001</p>
+                            </li>
+                            <li>
+                                <p class="hTit">예매상태</p>
+                                <p class="hTxt">예매 / 미입금<a href="#.">가상계좌번호</a></p>
+                            </li>
+                            <li>
+                                <p class="hTit">이용일시 <br/>및 장소</p>
+                                <p class="hTxt">2022. 01. 31 /<br/> 두다아트센터 <br/>두다홀1</p>
+                            </li>
+                            <li>
+                                <p class="hTit">취소가능일</p>
+                                <p class="hTxt">2022.01.20 <br/> 17:00</p>
+                            </li>
+                        </ul>
+                        <div>
+                            <p>* 공연관람 1일전 오후 5시까지 가능</p>
+                            <p>* 취소일자에 따라서 취소수수료가 달라집니다.</p>
+                            <p>* 단, 예매 당일 밤 12시 이전 취소시에는 취소수수료 없음.<br/>
+                                <span class="blank">(취소기한내에 한함)</span></p>
+                            <a href="#.">예매취소</a>
+                        </div>                        
+                    </div>
+                    <div class="historyBefore">
+                        <h3>뮤지컬 &lt;지킬앤하이드&gt;</h3>
+                        <ul>
+                            <li>
+                                <p class="hTit">예매일</p>
+                                <p class="hTxt">2000. 01. 01</p>
+                            </li>
+                            <li>
+                                <p class="hTit">결제금액</p>
+                                <p class="hTxt">100,000원</p>
+                            </li>
+                            <li>
+                                <p class="hTit">예매번호</p>
+                                <p class="hTxt">T00010002001</p>
+                            </li>
+                            <li>
+                                <p class="hTit">예매상태</p>
+                                <p class="hTxt">입금완료</p>
+                            </li>
+                            <li>
+                                <p class="hTit">이용일시 <br/>및 장소</p>
+                                <p class="hTxt">2000. 01. 31 / 두다아트센터 <br/>두다홀1</p>
+                            </li>
+                            <li>
+                                <p class="hTit">취소가능일</p>
+                                <p class="hTxt">2000.01.20 &nbsp; 17:00</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="artistRegist" data-toggle="tab">
+                <p>&rtrif; 예술인 등록으로 두다아트센터의 창작예술에 지원할 수 있습니다.</p>
+                <hr/>
+                <ul>
+                    <li>
+                        <p class="aTit">이름</p>
+                        <p class="aTxt">홍길동</p>
+                    </li>
+                    <li>
+                        <p class="aTit">활동분야(장르)</p>
+                        <p class="aTxt">
+                            <input type="text" name="artistGenre" value="" id="artistGenre"/>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="aTit">승인여부</p>
+                        <p class="aTxt">검토중</p>
+                    </li>
+                    <li>
+                        <p class="aTit">신청일</p>
+                        <p class="aTxt">2000. 01. 01</p>
+                    </li>
+                </ul>
+                <div class="arBtn"><a href="#.">신청하기</a></div>
+                <div class="artistGuide">
+                    <hr class="titBar"/>
+                    <h4>예술인 등록 대상</h4>
+                    <p>공연 · 미술 부문에서 독자적인 예술세계를 구축하고 새로운 흐름을 만들어 가는 예술가</p>
+                    <hr class="titBar"/>
+                    <h4>지원내용</h4>
+                    <p>- 공연제작비 외 두다아트센터 공연장/갤러리 이용비용 지원<br/>
+                    - 기획, 제작, 홍보마켓팅 지원</p>
+                    <hr class="titBar"/>
+                    <h4>심사절차</h4>
+                    <p>서류심사 - 개별 인터뷰 - 최종발표</p>
+                    <hr class="titBar"/>
+                    <h4>접수방법</h4>
+                    <p>두다아트센터 홈페이지에서 접수</p>
+                    <hr class="titBar"/>
+                    <h4>문의</h4>
+                    <p>admin@doodaartcenter.com / 00-000-000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<footer>
+    <div>
+        <div class="btnTop"><a href="#"><img src="./images/top.png" alt="more"/> TOP</div>
+        <div class="fLink">
+            <ul class="fLinkCon">
+                <li><a href="#">DUDA</a></li>
+                <li><a href="#">개인정보처리방침 등</a></li>
+                <li><a href="#">이메일 무단수집거부</a></li>
+                <li><a href="#">윤리규범</a></li>
+                <li><a href="#">사이트맵 </a></li>
+            </ul>
+            <ul class="snsIcon">
+                <li><a href="#"><img src="./images/f_icon01.png" alt="sns1"/></a></li>
+                <li><a href="#"><img src="./images/f_icon02.png" alt="sns2"/></a></li>
+                <li><a href="#"><img src="./images/f_icon03.png" alt="sns3"/></a></li>
+                <li><a href="#"><img src="./images/f_icon04.png" alt="sns4"/></a></li>
+                <li><a href="#"><img src="./images/f_icon05.png" alt="sns5"/></a></li>
+            </ul>
+        </div>
+        <div class="fInfo">
+            <div>
+                <p>
+                    <span>두다아트재단</span><span>대표 : 홍길동</span>
+                </p>
+                <address>
+                    인천광역시 서구 서곶로 284 (우) 22711<br/>
+                    284 Seogot-ro, Seo-gu, Incheon 22711 Korea
+                </address>
+                <p>Copyright &copy; 2022 DOODA ART CENTER All Right Reserved.</p>
+            </div>
+            <div>
+                <ul>
+                    <li>고객센터</li>
+                    <li>000-000-0000</li>
+                    <li>admin@doodaartcenter.com</li>
+                </ul>
+                <p><img src="./images/logo.svg" alt="footLogo"/></p>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+<script src="./js/script.js"></script>
+</body>
+</html>

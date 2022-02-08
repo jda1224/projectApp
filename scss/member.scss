@@ -230,7 +230,6 @@ input[id="personalAgree"]:checked + label::after{
     }
 }
 
-
 .aFindTab{
     width: 100%; height:70px;
     display: flex;
@@ -353,7 +352,7 @@ input[type="number"]::-webkit-inner-spin-button {
         }
     }
 }
-/*
+
 .mpContentsCon{
     height: 100%;
     position: relative;
@@ -361,15 +360,116 @@ input[type="number"]::-webkit-inner-spin-button {
         width:100%; height: 100%;
         background: #fff;
         position: absolute;
-        &.active{z-index:99;}
+        &.active{z-index:999;}
     }
 }
-*/
+
 
 .mpContentsCon{
     >div{margin-top: 60px;}
-    .userInfo{
+    #userInfo{
         .joinBtn>a:last-child{margin-left: 30px;}
+    }
+}
+#bookHistory{
+    >div>p{margin-bottom: 20px;}
+    .dateForm{
+        width: 100%;
+        background: #ededed;
+        box-sizing: border-box;
+        #prevYear,#nextvYear{width: 90px;}
+        #prevMonth, #prevDay, #nextMonth, #nextDay{width:60px;}
+        select{
+            box-sizing: border-box; height: 40px;
+            font-family: 'Montserrat','Pretendard';
+            @include text(16px,$baseC,500,left,1);
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            outline: 0;
+        }
+        label{margin: 0px 15px 0px 5px;
+            &:last-child{margin-right: 0;}
+        }
+    }   
+    .dateInquiry{
+        a{  width: 120px; height: 40px;
+            background: $gray6;
+            @include text(16px,#fff,400,center,40px);
+        }
+    } 
+    hr{ width: 100%; height: 2px;
+        background: $baseC; border: 0; margin: 40px 0;}
+}
+.historyList{
+    h3{@include text(24px,$baseC,600,left,1);}
+    .historyNow, .historyBefore{
+        >ul{display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+            li{ width:50%;
+                display: flex;
+                box-sizing: border-box;
+                border-bottom: 1px solid #ddd;
+                a{display:inline-block; height: 40px;}
+            }
+        }
+        >div{
+            @include text(15px,$baseC,400,left,1);
+            p{margin-bottom: 10px;}
+            >p:first-child{@include text(15px,$pointCr2,500,left,1);}
+            position: relative;
+            >a{
+                display: block;
+                width:120px; height: 40px;
+                background: $baseC;
+                @include text(16px,#fff,400,center,40px);
+                position: absolute;
+                top:0; right:0;
+            }
+        }
+    }
+    .historyBefore{margin-top:80px;}
+}
+
+#artistRegist{
+    >hr{ width: 100%; height: 2px;
+    background: $baseC; border: 0; margin: 20px 0 40px;}
+    >ul{width: 100%;
+        border-top: 1px solid #ddd;
+        li{
+            display: flex;
+            box-sizing: border-box;
+            border-bottom: 1px solid #ddd;
+            height:60px;
+            input[name="artistGenre"]{
+                font-family: 'Montserrat','Pretendard';
+                height: 40px; width: 200px;
+                border: 1px solid #ddd; outline: 0;
+                @include text(15px,$baseC,400,left,1);
+                padding: 5px 15px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    >div.arBtn>a{
+        display: block;
+        width: 120px; height: 40px;
+        background: $baseC;
+        @include text(16px,#fff,400,center,40px);
+        margin: 20px auto 0;
+    }
+    .artistGuide{
+        .titBar{
+            width: 50px; height:5px; border: 0;
+            background: $baseC; margin: 50px 0px 5px; 
+        }
+        h4{
+            @include text(20px,$baseC,600,left,1);
+            margin: 15px 0px;
+            p{@include text(14px,$baseC,400,left,1.5);}
+        }
     }
 }
 
@@ -495,20 +595,62 @@ input[type="number"]::-webkit-inner-spin-button {
     input[name="loginId"],input[name="loginPw"],input[name="accountName"],input[name="accountPhone"],input[name="accountEmail"],input[name="accountId"]{width: 480px;}
     button{width: 480px;}
 
+
+    .mpContentsWarp{height: 1100px;}
     .mypageBtn{
         display: flex;
         justify-content: space-between;
         a{width: 32%;}
     }
 
+    #bookHistory{
+        .dateForm{
+            display: flex;
+            justify-content: center;
+            height: 100px;
+            @include text(16px,$baseC,500,left,100px);
+            >p{ @include text(18px,$baseC,500,left,100px);
+                margin: 0px 80px 0px 50px;}
+            >span{display: inline-block; margin: 0px 15px;}
+            form#prexdateSelect, form#nextdateSelect{
+                @include text(16px,$baseC,400,left,100px);}
+        }
+        .dateInquiry{
+            a{ display: inline-block; margin-left: 80px;}
+        }    
+    }
+    .historyList{
+        .historyNow, .historyBefore{
+            >ul{ 
+                li{ height: 60px;
+                    br{display: none;}
+                    .hTit{@include text(16px,$baseC,600,left,60px);
+                        margin-left: 30px; width:160px;
+                    }
+                    .hTxt{@include text(16px,$baseC,400,left,60px);}
+                    &:nth-child(odd){border-right: 1px solid #ddd;;}
+                    a{  width:120px; margin-left: 20px;
+                        @include text(16px,#fff,400,center,40px);
+                    }
+                }
+            }
+        }
+        .historyBefore{margin-top:80px;}
+    }
+    #artistRegist>ul>li{
+        p.aTit{@include text(16px,$baseC,600,left,60px);
+            width: 150px; margin-left: 30px;
+        }
+        p.aTxt{@include text(16px,$baseC,400,left,60px);
+            margin-left: 30px;
+        }
+    }
 
 
-    
 }
 
 @media all and (max-width:768px){
     header{border-bottom: 1px solid $baseC;}
-    footer{z-index: 9999; margin-top: 200px;}
     .pageWarp{width: 100%;}
     .pageTit{
         margin: 110px 0px 50px;
@@ -525,7 +667,7 @@ input[type="number"]::-webkit-inner-spin-button {
         .agreeNum{display: none;}
     }
     .agreeCon, .selecCon, .joinInfoCon, .joinEndCon, .loginCon,
-    .aFindCon, .mypageBtn, .mpContentsCon
+    .aFindCon, .mypageBtn, .mpContentsCon, .mpContentsCon
     {margin: 40px 30px 0;}
 
     .blank{margin-left: 20px;}
@@ -594,9 +736,62 @@ input[type="number"]::-webkit-inner-spin-button {
     input[name="loginId"],input[name="loginPw"],input[name="accountName"],input[name="accountPhone"],input[name="accountEmail"],input[name="accountId"]{width: 100%;}
     button{width: 100%;}
 
+    .mpContentsWarp{height: 1250px;}
     .mypageBtn>a{width: 100%; margin-bottom: 20px;}
-    .userInfo{
+    #userInfo{
         input[name="id"]{width: 100%;}
+    }
+
+    #bookHistory{
+        .dateForm{
+            width: 100%; height: 260px;
+            >p{ @include text(18px,$baseC,500,center,1);
+                padding: 20px 0px 20px}
+            >span{display:block; width:10px;
+                text-align:center; margin: 10px auto;}
+            form{ width: 320px; margin: 0 auto;}
+        }
+        .dateInquiry{
+            a{ display: block;margin: 20px auto;}
+        }
+    }
+
+    .historyList{
+        .historyNow, .historyBefore{
+            >ul{ 
+                li{ height: 80px;
+                    .hTit{@include text(15px,$baseC,600,left,80px);
+                        margin-left: 15px; width:40%;
+                    }
+                    .hTxt{@include text(15px,$baseC,400,left,80px);
+                        width:60%;}
+                    &:nth-child(odd){border-right: 1px solid #ddd;;}
+                    a{  width:100px; 
+                        @include text(14px,#fff,400,center,30px);
+                        margin-left: 0px;
+                    }
+                    &:nth-child(5){
+                        .hTit{line-height: 1.5; margin-top:16px;}
+                    }
+                    &:nth-child(5)>.hTxt{line-height: 1.5; margin-top:6px;}
+                    &:nth-child(4)>.hTxt,&:nth-child(6)>.hTxt
+                    {line-height: 1.5; margin-top:16px;}
+                }
+            }
+            >div.blank{margin-left: 10px;}
+        }
+        .historyBefore{margin-top:80px;
+            >ul>li:nth-child(4)>.hTxt{line-height:80px; margin: 0;}
+        }
+    }
+
+    #artistRegist>ul>li{
+        p.aTit{@include text(15px,$baseC,600,left,60px);
+            width: 120px; margin-left: 30px;
+        }
+        p.aTxt{@include text(15px,$baseC,400,left,60px);
+            margin-left: 20px;
+        }
     }
 
 

@@ -1,379 +1,18 @@
 @charset "utf-8";
 @import "common";
-@media all and (min-width:769px){
-    html,body{position: relative;}
-    #search, .allMnwarp{top:0px;}
-    header{border-bottom: 1px solid #ddd}
-
-    .pageWarp{width: 1400px; margin: 0 auto;}
-    .pageTit{
-        margin: 130px 0px 60px;
-        h3{@include text(35px,$baseC,700,center,1);}
-        p{
-            margin: 20px 0px 10px;
-            @include text(18px,$baseC,400,left,1);
-            span{font-weight: 600;}
-            img{margin: 5px 10px 0px;}
-        }
-        hr.titLine{
-            width: 100%; height: 4px;
-            background: $baseC; border: 0;
-        }
-    }
-    #create, #artist, #ntcBoard, #qna, #memberTicket, #map 
-    {margin-bottom: 15%;}
-
-    #List{ width: 100%;
-        div.listWarp{
-            display: flex !important;
-            flex-wrap: wrap;
-        }  
-        div.perform{
-            width: 700px; height: 320px;
-            box-sizing: border-box;
-            margin-bottom: 80px;
-            hr{display: none;}
-            ul.inner{
-                width: 100%; height: 320px;
-                display: flex;
-                box-sizing: border-box;
-                li:first-child{width:240px; height: 320px;}
-                li:last-child{
-                    position: relative;
-                    width: 100%; height: 100%;
-                    margin-left: 30px;
-                    @include text(18px,$baseC,400,left,1);
-                    .pfGenre, .pfTime{margin-top: 20px;}
-                    h4{
-                        @include text(24px,$baseC,600,left,1); margin-top: 5px;
-                    }
-                    .pfPlace{
-                        position: absolute;
-                        bottom: 50px;
-                    }
-                    .pfDay{
-                        display: inline-block;
-                        color:$gray6; margin: 15px 0px;
-                    }
-                    .listBtn{
-                        width: 100%;
-                        position: absolute;
-                        bottom: 0;
-                        display: flex;
-                        >a{
-                            display: block;
-                            width:146px; height:47px;
-                            box-sizing: border-box;
-                            position: relative;
-                            img{
-                                vertical-align: middle;
-                                margin: -5px 5px 0px 0px;
-                            }
-                            &:hover img:nth-child(1) {display: none;}
-                            &:hover img:nth-child(2) {
-                                display: inline-block;
-                                @include trans(.4s);
-                            }
-                            img:nth-child(2),br{display: none;}
-                            &:nth-child(1){
-                                margin-right: 20px;
-                                border: 1px solid $pointC;
-                                @include text(16,$pointC,400,center,47px);
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 0%; height: 100%;
-                                    position: absolute;
-                                    top: 0; right:0;
-                                    background: $pointC;
-                                    @include trans(.4s);
-                                }
-                                &:hover{
-                                    color: #fff;
-                                    &::after{
-                                        width: 100%;
-                                        z-index: -1;
-                                    }
-                                }
-                            }
-                            &:nth-child(2){
-                                border: 1px solid $baseC;
-                                @include text(16,$baseC,400,center,47px);
-                                &::after {
-                                    content: '';
-                                    display: block;
-                                    width: 0%; height: 100%;
-                                    position: absolute;
-                                    top: 0; right:0;
-                                    background: $baseC;
-                                    @include trans(.4s);
-                                }
-                                &:hover{
-                                    color: #fff;
-                                    &::after{
-                                        width: 100%;
-                                        z-index: -1;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }        
-    }
-    
-    #pageDetail{
-        width: 100%; margin-bottom: 60px;
-        >div.infoWarp{
-            >ul.deatilInfo{
-                display: flex;
-                >li:nth-child(1){width:510px; height:680px;}
-                >li:nth-child(2){
-                    margin-left: 70px;
-                    width: 100%;
-                    .pdGenre{@include text(20px,$baseC,400,left,1);}
-                    .pdlName{
-                        @include text(50px,$baseC,500,left,1);
-                        margin: 5px 0px 15px;
-                    }
-                    .pdPlace{
-                        @include text(20px,$baseC,400,left,1);
-                        .pdDay{
-                            display: inline-block;
-                            color:$gray6; 
-                            margin: 0px 0px 10px;
-                        }
-                    }
-                    hr{
-                        width: 100%; height: 1px;
-                        background: #ddd; border: 0;
-                        margin: 30px 0px;
-                    }
-                    .pdSchedule{
-                        li{
-                            display: flex;
-                            margin-bottom: 12px;
-                            >p:first-child{
-                                width:120px;
-                                @include text(16px,$baseC,500,left,1.6);
-                            }
-                            >p:last-child{
-                                @include text(16px,$gray6,400,left,1.6);
-                            }
-                        }
-                    }
-                    .pdAlert{
-                        display: flex;
-                        margin-top: 30px;
-                        br{display: none;}
-                        >li:last-child{
-                            margin: 3px 0px 0px 10px;
-                            @include text(14px,$pointCr2,400,left,1.5);
-                            letter-spacing: -0.5px;
-                        }
-                    }
-                    .detailBtn{
-                        margin-top: 45px;
-                        position: relative;
-                        display: flex;
-                        >a{
-                            display: block;
-                            width:280px; height:70px;
-                            box-sizing: border-box;
-                            position: relative;
-                            margin-right: 50px;
-                            border: 1px solid $baseC ;
-                            @include text(18px,$baseC ,500,center,70px);
-                            img{
-                                vertical-align: middle;
-                                position: absolute;
-                                right: 40px; top: 50%;
-                                transform: translateY(-50%);
-                            }
-                            &:hover img:nth-child(1) {display: none;}
-                            &:hover img:nth-child(2) {
-                                display: inline-block;
-                                @include trans(.4s);
-                            }
-                            img:nth-child(2),br{display: none;}
-                            &::after {
-                                content: '';
-                                display: block;
-                                width: 0%; height: 100%;
-                                position: absolute;
-                                top: 0; right:0;
-                                background: $pointCr2;
-                                @include trans(.3s);
-                            }
-                            &:hover{
-                                color: #fff; border: 1px solid $pointCr2;
-                                &::after{
-                                    width: 100%;
-                                    z-index: -1;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        >div.conWarp{
-            width: 100%; height: 1400px;
-            margin-top: 100px;
-            hr{width:100%; height:4px;
-            background: $baseC; border: 0; margin: 0;}
-        }
-        .tab_menu{
-            width: 100%; height: 80px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            li{
-                width:150px; height: 70px;
-                @include text(20px,$baseC,400,center,80px);
-                cursor: pointer;
-                &.active{
-                    border-bottom:3px solid $pointCr2;
-                }
-            }
-        }
-        .tab_con{
-            width: 100%; height: 100%;
-            margin-top: 30px; 
-            position: relative;
-            div{
-                width: 100%; height: 100%;
-                background: #fff;
-                position: absolute;
-                &.active{z-index:999;}
-            }
-            #firstCon{
-                width: 100%; height: 100%;
-                background: #fff;
-                @include text(16px,$baseC,400,left,1.5);
-                >h4{font-weight: 600;//background: #fff;
-                }
-                >p{margin-bottom: 30px;}
-            }
-            #secondCon, #thirdCon, #fourthCon{
-                //width: 100%; height: 100%;
-                //background: #fff;
-                text-align: center;
-                img{width: 1000px;}
-            }
-        }
-    }
-    #lendGuide{
-        .lednPay{
-            th{@include text(16px,$baseC,600,center,50px);}
-            td{@include text(16px,$baseC,400,center,1.2);}
-        }
-    }
-    .lendCon, .createCon, .artistCon{        
-        p{@include text(16px,$baseC,400,left,1.5);}
-        .lendDown{@include text(16px,$baseC,400,center,35px);}
-    }
-    .guideList>li{@include text(16px,$baseC,400,left,2);}
-
-    .artistWarp{
-        width:100%;
-        .artistCon{
-            >ul{
-                >li{
-                    width:30%; height: 200px;
-                    margin-bottom: 80px;
-                    >div{margin-left: 40px;}
-                }
-            }
-        }
-    }
-
-    #ntcBoard{ width:100%;}
-    .ntcBoardSch{ width:100%; height:60px;
-        form{width: 100%;}
-        .nschTxt{ 
-            width:700px;
-            @include text(16px,$gray6,400,left,1);
-        }
-    }
-    .ntcBoardCon{
-        .ntcBoardList{
-            width: 100%;
-            tr{height: 60px; }
-            tr:first-child ~ tr td {border-top:1px solid #ddd;}
-            tr{
-                td:first-child {border-left:1px solid transparent;}
-                td:last-child {border-right:1px solid transparent}
-            }
-            tr:hover td {
-                border-top:1px solid $baseC;
-                border-bottom:1px solid $baseC;
-                &:first-child {border-left:1px solid $baseC;}
-                &:last-child {border-right:1px solid $baseC;}
-            }
-            tr:first-child ~ tr:hover td {border-top-color:$baseC;}
-            td{
-                &:first-child{width: 130px;}
-                &:nth-child(2){width: auto;}
-                &:last-child{width: 150px;}
-            }
-            td.num, td.date{
-                @include text(16px,$baseC,400,center,60px); position: relative;
-            }
-            td.tit{
-                @include text(16px,$baseC,400,left,60px);
-            }
-            .ntcbg{
-                width:70px; height:35px;
-                @include text(16px,#fff,400,center,35px);
-            }        
-        }
-    }
-    
-    
-    .qnaCon{
-        .qnaList{
-            width: 100%;             
-            .question{
-                @include text(16px,$baseC,400,left,60px);
-                padding-left: 50px;
-                &::before{padding-right: 50px;}
-                .qnaOpen{right: 50px;}
-            }
-            >.answer{
-                padding: 40px 145px; position: relative;
-                span{left: 115px;}
-            }
-        }
-    }
-
-    .memTiWarp{
-        br{display: none;}
-                
-            
-        
-    }
-
-    .mapCon{
-        >ul{
-            li{
-                >P:first-child{
-                    @include text(16px,$baseC,500,left,1);
-                }
-                >P:last-child{
-                    @include text(16px,$baseC,400,left,1);
-                    br{display: none;}
-                }
-            }
-        }
-    }
 
 
-    footer{position: relative; margin-top:0%;}
+/* 공통 */
+.pageTit{
+    margin: 130px 0px 60px;
+    position: relative;
+    h3{@include text(35px,$baseC,700,center,1);}
+    hr.titLine{
+        width: 100%; height: 4px;
+        background: $baseC; border: 0;
+    }
 }
 
-/*공통*/
 .pagenation{
     margin: 50px 0px 100px;
     .pager{
@@ -416,6 +55,196 @@
     }
 }
 
+/*두다재단*/
+hr.ddBar{width: 100%; height: 1px; 
+    background: #ddd; border: 0; margin: 50px 0px 0px;}
+.ddFacilityCon, .ddSeatCon{margin-top: 50px;}
+ //소개
+div.introdd{
+    >p:first-child{@include text(30px,$baseC,500,right,1);
+    margin: 20px 0 10px;}
+    >p:last-child{@include text(20px,$baseC,300,right,1);}
+} 
+//시설안내
+ul.facilityArea{
+    li{ margin-top: 50px;
+        &:first-child{margin-top: 0;}
+        >div{box-sizing: border-box; overflow: hidden;}
+        .imgArea{width: inherit;
+            img{width: 100%;}
+        }
+        .txtArea{ 
+            >p:first-child{@include text(24px,$baseC,600,left,1);
+            margin: 20px 0px;}
+            >p:last-child{@include text(16px,$baseC,400,left,1.5);}
+        }
+    }
+}
+
+ //좌석배치도
+ ul.ddSeatArea{
+    li{
+        p:first-child{@include text(24px,$baseC,600,center,1);
+            margin: 50px 0px 20px;}
+        >div.seatArea{
+            box-sizing: border-box; overflow: hidden;
+            text-align: center; width:inherit;
+        }
+    }    
+}
+
+/*공연/전시 일정*/
+#List{ width: 100%;
+    div.perform{
+        box-sizing: border-box;
+        ul.inner{
+            width: 100%; height: 320px;
+            display: flex;
+            box-sizing: border-box;
+            li:first-child{width:240px; height: 320px;}
+            li:last-child{
+                position: relative;
+                width: 100%; height: 100%;
+                margin-left: 30px;
+                @include text(18px,$baseC,400,left,1);
+                .pfGenre, .pfTime{margin-top: 20px;}
+                h4{@include text(24px,$baseC,600,left,1); margin-top: 5px;}
+                .pfPlace{position: absolute; bottom: 50px;}
+                .pfDay{display: inline-block; color:$gray6; margin: 15px 0px;}
+                .listBtn{ 
+                    position: absolute;
+                    >a{ display: block;
+                        box-sizing: border-box;
+                        position: relative;
+                        
+                        &:hover img:nth-child(1) {display: none;}
+                        &:hover img:nth-child(2) {
+                            display: inline-block;
+                            @include trans(.4s);
+                        }
+                        img:nth-child(2){display: none;}
+                    }
+                }
+            }
+        }
+    }        
+}
+
+/*공연/전시 상세페이지*/
+#pageDetail{
+    width: 100%; box-sizing: border-box;
+    >div.infoWarp{
+        >ul.deatilInfo{
+            >li:nth-child(2){
+                box-sizing: border-box;
+                .pdGenre{@include text(20px,$baseC,400,left,1);}
+                .pdlName{
+                    @include text(50px,$baseC,500,left,1);
+                    margin: 5px 0px 15px;
+                }
+                .pdPlace{
+                    @include text(20px,$baseC,400,left,1);
+                    .pdDay{
+                        display: inline-block;
+                        color:$gray6; margin: 0px 0px 10px;
+                    }
+                }
+                hr{
+                    width: 100%; height: 1px;
+                    background: #ddd; border: 0;
+                    margin: 30px 0px;
+                }
+                .pdSchedule{
+                    li{ display: flex;
+                        margin-bottom: 12px;
+                        >p:last-child{
+                            @include text(16px,$gray6,400,left,1.6);
+                        }
+                    }
+                }
+                .pdAlert{
+                    display: flex;
+                    margin-top: 30px;
+                    >li:last-child{
+                        margin: 3px 0px 0px 10px;
+                        @include text(14px,$pointCr2,400,left,1.5);
+                    }
+                }
+                .detailBtn{
+                    margin-top: 45px;
+                    position: relative;
+                    >a{
+                        display: block;
+                        box-sizing: border-box;
+                        position: relative;
+                        border: 1px solid $baseC ;
+                        @include text(18px,$baseC ,500,center,70px);
+                        img{
+                            vertical-align: middle;
+                            position: absolute;
+                            right: 40px; top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        &:hover img:nth-child(1) {display: none;}
+                        &:hover img:nth-child(2) {
+                            display: inline-block;
+                            @include trans(.4s);
+                        }
+                        img:nth-child(2),br{display: none;}
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 0%; height: 100%;
+                            position: absolute;
+                            top: 0; right:0;
+                            background: $pointCr2;
+                            @include trans(.3s);
+                        }
+                        &:hover{
+                            color: #fff; border: 1px solid $pointCr2;
+                            &::after{width: 100%;z-index: -1;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    >div.conWarp{
+        hr{width:100%; height:4px;
+        background: $baseC; border: 0; margin: 0;}
+    }
+    .tab_menu{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        li{ cursor: pointer;
+            &.active{
+                border-bottom:3px solid $pointCr2;
+            }
+        }
+    }
+    .tab_con{
+        width: 100%; height: 100%;
+        margin-top: 30px; 
+        position: relative;
+        div{
+            width: 100%; height: 100%;
+            background: #fff;
+            position: absolute;
+            &.active{z-index:999;}
+        }
+        #firstCon{
+            width: 100%; height: 100%;
+            background: #fff;
+            >h4{font-weight: 600;}
+            >p{margin-bottom: 30px;}
+        }
+        #secondCon, #thirdCon, #fourthCon{text-align: center;}
+    }
+}
+
+/*대관*/
 .lendWarp{
     height: 1400px;
     .lendDown{
@@ -442,7 +271,6 @@
     }
     
 }
-
 .lendTab{
     width: 100%; height:70px;
     display: flex;
@@ -475,14 +303,13 @@
     }
 }
 
+/*창작자 지원*/
 .createWarp,.artistWarp{
     >hr{width: 100%; height: 1px; 
     background: #ddd; border: 0; margin: 50px 0px 0px;}
     >img{width: 100%;}
 }
-
 .guideList>li::before{content: '※ ';}
-
 .artistWarp{
     .artistCon{margin-top: 60px;
         >ul{
@@ -494,6 +321,7 @@
     }
 }
 
+/*공지사항*/
 .ntcBoardWarp, .qnaWarp{position: relative;}
 
 .ntcBoardSch{
@@ -531,6 +359,7 @@
     }
 }
 
+/*자주묻는질문*/
 .qnaCon{
     >div:nth-child(2){position: relative;}
     .qnaList{
@@ -562,6 +391,7 @@
     }
 }
 
+/*회원/예매안내*/
 .memTiWarp{ height: 680px;
     .memTiTab{
         width: 100%; height:70px;
@@ -583,8 +413,7 @@
                 border-right: 3px solid $baseC;
             }
         }
-    }
-    
+    }    
     .memTiCon{
         width: 100%; height: 100%;
         position: relative;
@@ -598,7 +427,7 @@
     }
 }
 
-
+/*오시는길*/
 .mapCon{
     >p.add{@include text(16px,$baseC,600,left,1);}
     >hr.line{
@@ -614,83 +443,439 @@
     }
 }
 
-
-
-
-
-
-
-
-/*모바일*/
-@media all and (max-width:768px){
-    header{border-bottom: 1px solid $baseC;}
-    
-    .pageWarp{width: 100%;}
-    .pageTit{
-        margin: 110px 0px 50px;
-        position: relative;
-        h3{@include text(35px,$baseC,700,center,1);}
-        p{display: none;
+/*개인정보처리방침 등*/
+.personalTab{
+    width: 100%; height:70px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid $baseC;
+    position: relative;
+    >li{
+        width: 32%; height: 100%;
+        background: #f4f4f4;
+        box-sizing: border-box;
+        @include text(18px,$baseC,500,center,70px);
+        cursor: pointer;
+        &.active{
+            height: 74px;
+            background: #fff;
+            border-top: 3px solid $baseC;
+            border-left: 3px solid $baseC;
+            border-right: 3px solid $baseC;
         }
-        hr.titLine{
-            width: 100%; height: 4px;
-            background: $baseC; border: 0;
-            margin-top: 30px;
+    }
+}
+.personalCon{
+    height: 100%;
+    position: relative;
+    >div{
+        width:100%; height: 100%;
+        background: #fff;
+        position: absolute;
+        &.active{z-index:999;}
+    }
+}
+.personalCon,.ethicsCon{
+    margin-top: 50px;
+    h4{@include text(16px,$baseC,700,left,1); margin-bottom:10px;}
+    p{@include text(15px,$baseC,400,left,1.2); margin-bottom: 40px;}
+
+}
+
+/*사이트맵*/
+.sitemapTopbtn{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+    //border-bottom: 1px solid #ddd;
+    li a{
+        display: block;
+        width:100%; height: 50px;
+        @include text(16,$baseC,400,center,50px);
+        border: 1px solid #ddd;
+        &:hover{
+            @include text(16,$pointCr2,400,center,50px);
+            border: 1px solid $pointCr2;
+        }
+    }
+}
+.sitemapList{
+    >li{margin-bottom: 60px; box-sizing: border-box;
+        >p.tit{
+            box-sizing: border-box;
+            position: relative;
+        }
+        >ul.subList{
+            display: flex; box-sizing: border-box;
+            >li a:hover{
+                display: block;
+                color:$pointCr2;
+                text-decoration: underline;
+            }
+        }
+    }        
+}
+
+
+
+
+/* PC */
+@media all and (min-width:769px){
+    html,body{position: relative;}
+    #search, .allMnwarp{top:0px;}
+    header{border-bottom: 1px solid #ddd}
+    .pageWarp{width: 1400px; margin: 0 auto;}
+    .pageTit{
+        margin: 130px 0px 60px;
+        p{
+            margin: 20px 0px 10px;
+            @include text(18px,$baseC,400,left,1);
+            span{font-weight: 600;}
+            img{margin: 5px 10px 0px;}
+        }
+    }
+    #create, #artist, #ntcBoard, #qna, #memberTicket, #map 
+    {margin-bottom: 15%;}
+
+    .lendCon, .createCon, .artistCon{        
+        p{@include text(16px,$baseC,400,left,1.5);}
+        .lendDown{@include text(16px,$baseC,400,center,35px);}
+    }
+
+    /*두다재단*/
+    .ddIntroCon, .ddFacilityCon, .ddSeatCon{
+    h3{@include text(30px,$baseC,500,left,1); margin-top: 40px;}
+    h4{@include text(20px,$baseC,500,left,1); margin: 10px 0px 40px;}   
+    }
+    //소개
+    div.introTxt>p{ @include text(16px,$baseC,400,left,1.6);}
+    //시설안내
+    ul.facilityArea{
+        li{ display: flex;
+            justify-content: space-between;
+            &:first-child{margin-top: 0;}
+            >div{width:700px; height:350px;}
+            .txtArea{ padding-left:50px;}
+        }
+    }
+    //좌석배치도
+    ul.ddSeatArea>li{ width:740px; margin: 0 auto;}        
+    
+
+    /*공연/전시 일정*/
+    #List{
+        div.listWarp{
+            display: flex !important;
+            flex-wrap: wrap;
+        }  
+        div.perform{
+            width: 700px; height: 320px;
+            margin-bottom: 80px;
+            hr{display: none;}
+            ul.inner{
+                .listBtn{
+                    width: 100%; bottom: 0; display: flex;
+                    >a{ width:146px; height:47px;
+                        img{
+                            vertical-align: middle;
+                            margin: -5px 5px 0px 0px;
+                        }                        
+                        br{display: none;}
+                        &:nth-child(1){
+                            margin-right: 20px;
+                            border: 1px solid $pointC;
+                            @include text(16,$pointC,400,center,47px);
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 0%; height: 100%;
+                                position: absolute;
+                                top: 0; right:0;
+                                background: $pointC;
+                                @include trans(.4s);
+                            }
+                            &:hover{
+                                color: #fff;
+                                &::after{ width: 100%; z-index: -1;}
+                            }
+                        }
+                        &:nth-child(2){
+                            border: 1px solid $baseC;
+                            @include text(16,$baseC,400,center,47px);
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: 0%; height: 100%;
+                                position: absolute;
+                                top: 0; right:0;
+                                background: $baseC;
+                                @include trans(.4s);
+                            }
+                            &:hover{
+                                color: #fff;
+                                &::after{ width: 100%; z-index: -1;}
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+    
+    /*공연/전시 상세페이지*/
+    #pageDetail{
+        margin-bottom: 60px;
+        >div.infoWarp{
+            >ul.deatilInfo{
+                display: flex;
+                >li:nth-child(1){width:510px; height:680px;}
+                >li:nth-child(2){
+                    margin-left: 70px;
+                    width: 100%;
+                    .pdSchedule{
+                        li{
+                            >p:first-child{
+                                width:120px;
+                                @include text(16px,$baseC,500,left,1.6);}
+                        }
+                    }
+                    .pdAlert{
+                        br{display: none;}
+                        >li:last-child{ letter-spacing: -0.5px;}
+                    }
+                    .detailBtn{
+                        display: flex;
+                        >a{ width:280px; height:70px;
+                            margin-right: 50px;
+                            br{display: none;}
+                        }
+                    }
+                }
+            }
+        }
+        >div.conWarp{
+            width: 100%; height: 1400px;
+            margin-top: 100px;
+        }
+        .tab_menu{
+            height: 80px;
+            li{ width:150px; height: 70px;
+                @include text(20px,$baseC,400,center,80px);                
+            }
+        }
+        .tab_con{
+            #firstCon{@include text(16px,$baseC,400,left,1.5);}
+            #secondCon, #thirdCon, #fourthCon{
+                img{width: 1000px;}
+            }
         }
     }
 
-    .perform, .lendWarp, .createWarp, .artistWarp, .ntcBoardWarp,
-    .mapWrap, .qnaWarp, .memTiWarp{margin: 0px 30px;}
-        
-        
-    #List{
-        width: 100%;
-        .perform{
+    /*대관*/
+    #lendGuide{
+        .lednPay{
+            th{@include text(16px,$baseC,600,center,50px);}
+            td{@include text(16px,$baseC,400,center,1.2);}
+        }
+    }
+
+    .guideList>li{@include text(16px,$baseC,400,left,2);}
+
+    /*창작자 지원*/
+    .artistWarp{
+        width:100%;
+        .artistCon{
+            >ul{
+                >li{
+                    width:30%; height: 200px;
+                    margin-bottom: 80px;
+                    >div{margin-left: 40px;}
+                }
+            }
+        }
+    }
+
+    /*공지사항*/
+    #ntcBoard{ width:100%;}
+    .ntcBoardSch{ width:100%; height:60px;
+        form{width: 100%;}
+        .nschTxt{ 
+            width:700px;
+            @include text(16px,$gray6,400,left,1);
+        }
+    }
+    .ntcBoardCon{
+        .ntcBoardList{
             width: 100%;
-            box-sizing: border-box;
+            tr{height: 60px; }
+            tr:first-child ~ tr td {border-top:1px solid #ddd;}
+            tr{
+                td:first-child {border-left:1px solid transparent;}
+                td:last-child {border-right:1px solid transparent}
+            }
+            tr:hover td {
+                border-top:1px solid $baseC;
+                border-bottom:1px solid $baseC;
+                &:first-child {border-left:1px solid $baseC;}
+                &:last-child {border-right:1px solid $baseC;}
+            }
+            tr:first-child ~ tr:hover td {border-top-color:$baseC;}
+            td{
+                &:first-child{width: 130px;}
+                &:nth-child(2){width: auto;}
+                &:last-child{width: 150px;}
+            }
+            td.num, td.date{
+                @include text(16px,$baseC,400,center,60px); position: relative;
+            }
+            td.tit{
+                @include text(16px,$baseC,400,left,60px);
+            }
+            .ntcbg{
+                width:70px; height:35px;
+                @include text(16px,#fff,400,center,35px);
+            }        
+        }
+    }
+    
+    /*자주묻는질문*/
+    .qnaCon{
+        .qnaList{
+            width: 100%;             
+            .question{
+                @include text(16px,$baseC,400,left,60px);
+                padding-left: 50px;
+                &::before{padding-right: 50px;}
+                .qnaOpen{right: 50px;}
+            }
+            >.answer{
+                padding: 40px 145px; position: relative;
+                span{left: 115px;}
+            }
+        }
+    }
+
+    /*회원/예매안내*/
+    .memTiWarp{br{display: none;}}
+
+    /*오시는길*/
+    .mapCon{
+        >ul{
+            li{
+                >P:first-child{@include text(16px,$baseC,500,left,1);}
+                >P:last-child{
+                    @include text(16px,$baseC,400,left,1);
+                    br{display: none;}
+                }
+            }
+        }
+    }
+
+    /*개인정보처리방침 등*/
+    .personalWarp{height: 700px;}
+    .personalCon{width: 100%;}
+       
+    /*사이트맵*/
+    .sitemapTopbtn>li{width: 20%;}
+    .sitemapList{
+        >li{height: 80px; display: flex;
+            >p.tit{
+                @include text(20px,$baseC,600,left,80px);
+                width: 200px; 
+                border-top: 1px solid $pointCr2;
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 7px; height: 12px; 
+                    position: absolute;
+                    top: 50%; right:-20px;
+                    transform: translateY(-50%);
+                    background: url(../images/page_arr.png) no-repeat;
+                }
+            }
+            >ul.subList{ 
+                width: 1200px; 
+                border-top: 1px solid #ddd;
+                padding-left: 50px; 
+                >li a{
+                    @include text(18px,$baseC,400,left,80px);
+                    width: 180px;
+                }
+            }
+    
+        }
+    }
+
+
+    /*푸터*/
+    footer{position: relative; margin-top:250px;}
+}
+
+/* 모바일 */
+@media all and (max-width:768px){
+    header{border-bottom: 1px solid $baseC;}
+    .pageWarp{width: 100%;}
+    .pageTit{
+        margin: 110px 0px 50px;
+        p{display: none;}
+        hr.titLine{margin-top: 30px;}
+    }
+
+    .perform, .lendWarp, .createWarp, .artistWarp, .ntcBoardWarp, .mapWrap, .qnaWarp, .memTiWarp, .ddIntroCon, .personalCon,.ethicsCon,
+    .sitemapCon{margin: 0px 30px;}
+
+    .lendCon, .createCon, .memTiCon{
+        p{@include text(15px,$baseC,400,left,1.5);}
+        .lendDown{@include text(16px,$baseC,400,center,35px);}
+    }
+    
+    /*두다재단*/
+    .ddIntroWarp{
+        width: 100%;
+        >img{width: 100%;}
+    }
+    .ddIntroCon, .ddFacilityCon, .ddSeatCon{
+    h3{@include text(28px,$baseC,500,left,1); margin-top: 40px;}
+    h4{@include text(18px,$baseC,500,left,1); margin: 10px 0px 40px; letter-spacing: -1px;}   
+    }
+    //소개
+    .ddIntroCon{margin-top: 50px;}
+    div.introTxt>p{ @include text(15px,$baseC,400,left,1.6);} 
+    //시설안내
+    ul.facilityArea{
+        li{
+            &:first-child{margin-top: 0;}
+            .txtArea{ 
+                box-sizing: border-box;
+                padding: 10px 30px 0px;
+            }
+        }
+    }
+    //좌석배치도
+    ul.ddSeatArea{
+        li{ width: 100%;
+            >div.seatArea img{width: 100%;}
+        }  
+        hr{display: none;} 
+        li:last-child{margin-top: 60px;}     
+    }
+
+
+    /*공연/전시 일정*/  
+    #List{
+        div.perform{
+            width: 100%;
             hr{ width: 100%; height: 1px; 
                 background: #ddd; border: 0;
                 margin: 50px 0px 40px;
             }
             ul.inner{
-                width: 100%; height: 320px;
-                display: flex;
-                box-sizing: border-box;
-                li:first-child{width:240px; height: 320px;}
-                li:last-child{
-                    position: relative;
-                    width: 100%; height: 100%;
-                    margin-left: 30px;
-                    @include text(18px,$baseC,400,left,1);
-                    .pfGenre, .pfTime{margin-top: 20px;}
-                    h4{
-                        @include text(24px,$baseC,600,left,1); margin-top: 5px;
-                    }
-                    .pfPlace{
-                        position: absolute;
-                        bottom: 5px;
-                    }
-                    .pfDay{
-                        display: inline-block;
-                        color:$gray6; margin: 15px 0px;
-                    }
-                }
                 .listBtn{
-                    position: absolute;
                     top: 50%; right: 0;
                     transform: translateY(-50%);
-                    a{
-                        display: block;
-                        width:85px; height:85px;
+                    >a{ width:85px; height:85px;
                         border-radius: 50%;
-                        box-sizing: border-box;
-                        position: relative;
-                        img{margin: 20px auto 5px;}
-                        &:hover img:nth-child(1) {display: none;}
-                        &:hover img:nth-child(2) {
-                            display: inline-block;
-                            @include trans(.4s);
-                        }
+                        img{margin: 20px auto 5px;}                        
                         img:nth-child(2){display: none;}
                         &:nth-child(1){
                             border: 1px solid $pointC;
@@ -709,17 +894,15 @@
                                 background-color: $baseC;
                             }
                         }
-
                     }
                 }
             }
         }
     }
 
+    /*공연/전시 상세페이지*/ 
     #pageDetail{
-        width: 100%;
         >div.infoWarp{
-            width: 100%; box-sizing: border-box;
             >ul.deatilInfo{
                 >li:nth-child(1){
                     width:100%; height:auto;
@@ -727,86 +910,17 @@
                     img{width:100%;}
                 }
                 >li:nth-child(2){
-                    box-sizing: border-box;
                     margin: 30px 30px 0px;
-                    .pdGenre{@include text(20px,$baseC,400,left,1);}
-                    .pdlName{
-                        @include text(50px,$baseC,500,left,1);
-                        margin: 5px 0px 15px;
-                    }
-                    .pdPlace{
-                        @include text(20px,$baseC,400,left,1);
-                        .pdDay{
-                            display: inline-block;
-                            color:$gray6; 
-                            margin: 0px 0px 10px;
-                        }
-                    }
-                    hr{
-                        width: 100%; height: 1px;
-                        background: #ddd; border: 0;
-                        margin: 30px 0px;
-                    }
                     .pdSchedule{
                         li{
-                            display: flex;
-                            margin-bottom: 12px;
                             >p:first-child{
                                 width:100px;
-                                @include text(16px,$baseC,500,left,1);
-                            }
-                            >p:last-child{
-                                @include text(16px,$gray6,400,left,1.6);
-                            }
-                        }
-                    }
-                    .pdAlert{
-                        display: flex;
-                        margin-top: 30px;
-                        >li:last-child{
-                            margin: 3px 0px 0px 10px;
-                            @include text(14px,$pointCr2,400,left,1.5);
+                                @include text(16px,$baseC,500,left,1);}
                         }
                     }
                     .detailBtn{
-                        margin-top: 45px;
-                        position: relative;
-                        >a{
-                            display: block;
-                            width:100%; height:70px;
-                            box-sizing: border-box;
-                            position: relative;
+                        >a{ width:100%; height:70px;
                             margin-bottom: 10px;
-                            border: 1px solid $baseC ;
-                            @include text(18px,$baseC ,500,center,70px);
-                            img{
-                                vertical-align: middle;
-                                position: absolute;
-                                right: 40px; top: 50%;
-                                transform: translateY(-50%);
-                            }
-                            &:hover img:nth-child(1) {display: none;}
-                            &:hover img:nth-child(2) {
-                                display: inline-block;
-                                @include trans(.4s);
-                            }
-                            img:nth-child(2),br{display: none;}
-                            &::after {
-                                content: '';
-                                display: block;
-                                width: 0%; height: 100%;
-                                position: absolute;
-                                top: 0; right:0;
-                                background: $pointCr2;
-                                @include trans(.3s);
-                            }
-                            &:hover{
-                                color: #fff; border: 1px solid $pointCr2;
-                                &::after{
-                                    width: 100%;
-                                    z-index: -1;
-                                }
-                            }
                         }
                     }
                 }
@@ -815,50 +929,25 @@
         >div.conWarp{
             height: 1100px;
             margin: 100px 30px 0px 30px; box-sizing: border-box;
-            hr{width:100%; height:4px;
-            background: $baseC; border: 0; margin: 0;}
         }
         .tab_menu{
-            width: 100%; height: 50px;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            li{
-                width:25%; height: 60px;
+            height: 50px;
+            li{ width:25%; height: 60px;
                 @include text(18px,$baseC,400,center,70px);
-                cursor: pointer;
-                &.active{
-                    border-bottom:3px solid $pointCr2;
-                }
             }
         }
         .tab_con{
-            width: 100%; height: 100%;
-            margin-top: 30px; 
-            position: relative;
-            div{
-                width: 100%; height: 100%;
-                background: #fff;
-                position: absolute;
-                &.active{z-index:999;}
-            }
             #firstCon{
-                width: 100%; height: 100%;
-                background: #fff;
                 @include text(14px,$baseC,400,left,1.5);
-                >h4{font-weight: 600;//background: #fff;
-                }
-                >p{ width:85%;margin-bottom: 30px;}
+                >p{width:85%;}
             }
             #secondCon, #thirdCon, #fourthCon{
-                //width: 100%; height: 100%;
-                //background: #fff;
-                text-align: center;
                 img{width: 100%;}
             }
         }
     }
 
+    /*대관, 창작자 지원*/
     #lendGuide, #create{
         .lednPay{
             th{@include text(15px,$baseC,600,center,50px);}
@@ -866,11 +955,9 @@
         }
         .guideList>li{@include text(15px,$baseC,400,left,2);}
     }
-    .lendCon, .createCon, .memTiCon{
-        p{@include text(15px,$baseC,400,left,1.5);}
-        .lendDown{@include text(16px,$baseC,400,center,35px);}
-    }
 
+    
+    /*창작자 지원 - 두다아티스트*/
     .artistWarp{
         .artistCon{
             >ul{
@@ -898,6 +985,7 @@
         }
     }
 
+    /*공지사항*/
     .ntcBoardSch{ height:60px;
         form{width: 100%; height:100%;}
         .nschTxt{ 
@@ -949,6 +1037,7 @@
         }
     }
 
+    /*자주묻는질문*/
     .qnaCon{
         .qnaList{
             width: 100%;
@@ -965,6 +1054,7 @@
         }
     }
 
+    /*오시는길*/
     .mapCon{
         >ul{
             li{
@@ -973,8 +1063,50 @@
             }
         }
     }
+    
+    /*개인정보처리방침 등*/
+    .personalWarp{height: 1180px;}
+    .personalCon>div{margin-top: 50px;}
+    
+    /*사이트맵*/
+    
+    .sitemapTopbtn{
+        flex-wrap: wrap;
+        li{ width: 45%; margin-bottom: 20px;}
+    }
+    
+    .sitemapList{
+        >li{height: auto;
+            border-top: 1px solid $pointCr2;
+            >p.tit{
+                @include text(20px,$baseC,600,left,1);
+                margin: 20px 10px 15px;
+            }
+            >ul.subList{ 
+                display: flex; width: auto; 
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                padding-left: 25px; 
+                position: relative;
+                &::before{
+                    content: '';
+                    display: block;
+                    width: 7px; height: 12px; 
+                    position: absolute;
+                    top: 10px; left:10px;
+                    background: url(../images/page_arr.png) no-repeat;
+                }
+                >li a{
+                    @include text(16px,$baseC,400,left,2);
+                    width: 125px; height: 40px;;
+                }                
+            }
+        }
+        
+    }
+    
 
 
-
+    /*푸터*/
     footer{z-index: 9999; margin-top: 200px;}
 }

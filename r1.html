@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=""/>
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <title>예매하기</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="./css/reserve.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="reserve">
+    <div class="tabMn">
+        <ul class="tabTit">
+            <li class="active">관람일 회차선택</li>
+            <li>좌석선택</li>
+            <li>인원선택</li>
+            <li>결제</li>
+        </ul>
+    </div>
+
+    <div class="reserveWrap">
+        <div id="reserve1" class="active">
+            <div class="bookInfo">
+                <div><img src="./images/reserve_thumb.jpg" alt="thumb"></div>
+                <div>
+                    <h3>뮤지컬 &lt;레베카&gt;</h3>
+                    <ul class="bookData">
+                        <li>
+                            <p class="bookTit">기간</p>
+                            <p class="bookTxt">2022. 01. 01 ~ 2022. 01. 31</p>
+                        </li>
+                        <li>
+                            <p class="bookTit">장소</p>
+                            <p class="bookTxt">두다홀</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bookPick">
+                <div class="calendar">
+                    <h4>날짜선택</h4>
+                    <div class="calDate">2022년 1월</div>
+                    <div class="calSelec">
+                        <table class="calTable">
+                            <caption>날짜선택</caption>
+                            <tr>
+                                <th class="calSun">일</th>
+                                <th>월</a></th>
+                                <th>화</a></th>
+                                <th>수</a></th>
+                                <th>목</a></th>
+                                <th>금</th>
+                                <th class="calSat">토</th>
+                            </tr>
+                            <tr>
+                                <td class="calSun">&nbsp;</td>
+                                <td class="calMon">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="calSat"><a href="#">1</a></td>
+                            </tr>
+                            <tr>
+                                <td class="calSun"><a href="#">2</a></td>
+                                <td class="calMon">3</td>
+                                <td><a href="#">4</a></td>
+                                <td><a href="#">5</a></td>
+                                <td><a href="#">6</a></td>
+                                <td><a href="#">7</a></td>
+                                <td class="calSat"><a href="#">8</a></td>
+                            </tr>
+                            <tr>
+                                <td class="calSun"><a href="#">9</a></td>
+                                <td class="calMon">10</td>
+                                <td><a href="#">11</a></td>
+                                <td><a href="#">12</a></td>
+                                <td><a href="#">13</a></td>
+                                <td><a href="#">14</a></td>
+                                <td class="calSat"><a href="#">15</a></td>
+                            </tr>
+                            <tr>
+                                <td class="calSun"><a href="#">16</a></td>
+                                <td class="calMon">17</td>
+                                <td><a href="#">18</a></td>
+                                <td><a href="#">19</a></td>
+                                <td><a href="#">20</a></td>
+                                <td><a href="#">21</a></td>
+                                <td class="calSat"><a href="#">22</a></td>
+                            </tr>
+                            <tr>
+                                <td class="calSun"><a href="#">23</a></td>
+                                <td class="calMon">26</td>
+                                <td><a href="#">25</a></td>
+                                <td><a href="#">26</a></td>
+                                <td><a href="#">27</a></td>
+                                <td><a href="#">28</a></td>
+                                <td class="calSat"><a href="#">29</a></td>
+                            </tr>
+                            <tr>
+                                <td class="calSun"><a href="#">30</a></td>
+                                <td class="calMon">31</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="calSat">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="pick">
+                    <h4>회차선택</h4>
+                    <div>
+                        <ul class="pickInfo">
+                            <li><a href="#">
+                                <span class="pickNum">1회차</span>
+                                <span class="pickTime">00:00</span>
+                                <span class="pickSeat">000석</span>
+                            </a></li>
+                            <li><a href="#">
+                                <span class="pickNum">2회차</span>
+                                <span class="pickTime">00:00</span>
+                                <span class="pickSeat">000석</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="r1BtnNext">
+                <a href="#reserve2">예매하기</a>
+            </div>
+        </div>
+        
+        <div id="reserve2">
+            <div class="seatSelec">
+                <div class="seatPick">
+                    <div class="spTit">STAGE</div>
+                    <div class="spPicker">
+                        <div><span class="viewSelec"></span>선택한 좌석</div>
+                        <div><span class="viewYes"></span>예매가능</div>
+                        <div><span class="viewNo"></span>예매불가</div>
+                    </div>
+                    <div class="spView">
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewVipv"></div>
+                            <div class="viewVipv"></div>
+                            <div class="viewVipv"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVip"></div>
+                            <div class="viewVipv"></div>
+                            <div class="viewVipv"></div>
+                            <div class="viewVipv"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewRv"></div>
+                            <div class="viewRv"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewRv"></div>
+                            <div class="viewRv"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewRv"></div>
+                            <div class="viewRv"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewR"></div>
+                            <div class="viewRv"></div>
+                            <div class="viewRv"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewSv"></div>
+                            <div class="viewSv"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewSv"></div>
+                            <div class="viewSv"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewSv"></div>
+                            <div class="viewSv"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewS"></div>
+                            <div class="viewSv"></div>
+                            <div class="viewSv"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewAv"></div>
+                            <div class="viewAv"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewAv"></div>
+                            <div class="viewAv"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewAv"></div>
+                            <div class="viewAv"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewA"></div>
+                            <div class="viewAv"></div>
+                            <div class="viewAv"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewYes"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                        <div class="viewRow">
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                            <div class="viewNo"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="seatInfo">
+                    <div class="seatGraed">
+                        <h4>좌석등급 / 잔여석</h4>
+                        <div>
+                            <table class="seatColor">
+                                <tr>
+                                    <th>좌석등급</th>
+                                    <th>가격</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="seatVip"></span>VIP석<span>00석</span>
+                                    </td>
+                                    <td>150,000원</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="seatVipv"></span>(가변VIP석)석<span>00석</span></td>
+                                    <td>150,000원</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="seatR"></span>R석<span>00석</span></td>
+                                    <td>130,000원</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="seatRv"></span>(가변R석)<span>00석</span></td>
+                                    <td>130,000원</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="seatS"></span>S석<span>00석</span></td>
+                                    <td>100,000원</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="seatSv"></span>(가변S석)<span>00석</span></td>
+                                    <td>100,000원</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="seatA"></span>A석<span>00석</span></td>
+                                    <td>70,000원</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="seatAv"></span>(가변A석)<span>00석</span></td>
+                                    <td>70,000원</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="seatResult">
+                        <h4>선택된 좌석 정보</h4>
+                        <div>
+                            <ul>
+                                <li class="resultV">
+                                    <span class="seatVip"></span>VIP석 1층 A열 1번
+                                    <img src="./images/r_cancle.png" alt="cancle">
+                                </li>
+                                <li class="resultVv">
+                                    <span class="seatVipv"></span>VIP석 1층 A열 2번
+                                    <img src="./images/r_cancle.png" alt="cancle">
+                                </li>
+                                <li class="resultR">
+                                    <span class="seatR"></span>R석 1층 B열 31번
+                                    <img src="./images/r_cancle.png" alt="cancle">
+                                </li>
+                                <li class="resultRv">
+                                    <span class="seatRv"></span>R석 1층 B열 4번
+                                    <img src="./images/r_cancle.png" alt="cancle">
+                                </li>
+                                <li class="resultS">
+                                    <span class="seatS"></span>S석 1층 C열 5번
+                                    <img src="./images/r_cancle.png" alt="cancle">
+                                </li>
+                                <li class="resultSv">
+                                    <span class="seatSv"></span>S석 1층 C열 6번
+                                    <img src="./images/r_cancle.png" alt="cancle">
+                                </li>
+                                <li class="resultA">
+                                    <span class="seatA"></span>A석 1층 D열 7번
+                                    <img src="./images/r_cancle.png" alt="cancle">
+                                </li>
+                                <li class="resultAv">
+                                    <span class="seatAv"></span>A석 1층 D열 8번
+                                    <img src="./images/r_cancle.png" alt="cancle">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rBtnWrap">
+                        <div class="r2BtnPrev"><a href="#reserve1">이전</a></div>
+                        <div class="r2BtnNext"><a href="#reserve3">좌석선택완료</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="reserve3">
+            <h4>좌석수량선택</h4>
+            <div class="personSelec">
+                <h5>VIP석</h5>
+                <ul class="personVip">
+                    <li>
+                        <ul class="personInfo">
+                            <li>일반</li>
+                            <li>150,000원</li>
+                            <li>
+                                <form name="personnelNum">
+                                    <fieldset>
+                                        <label for="number">인원수량</label>
+                                        <select name="number" class="number">
+                                            <option selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </fieldset>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="personInfo">
+                            <li>국가유공자(본인만)</li>
+                            <li>105,000원</li>
+                            <li>
+                                <form name="personnelNum">
+                                    <fieldset>
+                                        <label for="number">인원수량</label>
+                                        <select name="number" class="number">
+                                            <option selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </fieldset>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="personInfo">
+                            <li>장애인1~3급(중중/동반1인)30%</li>
+                            <li>105,000원</li>
+                            <li>
+                                <form name="personnelNum">
+                                    <fieldset>
+                                        <label for="number">인원수량</label>
+                                        <select name="number" class="number">
+                                            <option selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </fieldset>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="personInfo">
+                            <li>국가유공자(본인만)30%</li>
+                            <li>105,000원</li>
+                            <li>
+                                <form name="personnelNum">
+                                    <fieldset>
+                                        <label for="number">인원수량</label>
+                                        <select name="number" class="number">
+                                            <option selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </fieldset>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h5>R석</h5>
+                <ul class="personR">
+                    <li>
+                        <ul class="personInfo">
+                            <li>일반</li>
+                            <li>130,000원</li>
+                            <li>
+                                <form name="personnelNum">
+                                    <fieldset>
+                                        <label for="number">인원수량</label>
+                                        <select name="number" class="number">
+                                            <option selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </fieldset>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="personInfo">
+                            <li>국가유공자(본인만)</li>
+                            <li>91,000원</li>
+                            <li>
+                                <form name="personnelNum">
+                                    <fieldset>
+                                        <label for="number">인원수량</label>
+                                        <select name="number" class="number">
+                                            <option selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </fieldset>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="personInfo">
+                            <li>장애인1~3급(중중/동반1인)30%</li>
+                            <li>91,000원</li>
+                            <li>
+                                <form name="personnelNum">
+                                    <fieldset>
+                                        <label for="number">인원수량</label>
+                                        <select name="number" class="number">
+                                            <option selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </fieldset>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="personInfo">
+                            <li>국가유공자(본인만)30%</li>
+                            <li>91,000원</li>
+                            <li>
+                                <form name="personnelNum">
+                                    <fieldset>
+                                        <label for="number">인원수량</label>
+                                        <select name="number" class="number">
+                                            <option selected="selected">0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </fieldset>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="rBtnWrap">
+                <div class="r3BtnPrev"><a href="#reserve2">이전</a></div>
+                <div class="r3BtnNext"><a href="#reserve4">다음</a></div>
+            </div>
+        </div>
+
+        <div id="reserve4">
+            <h4>결제</h4>
+            <p>결제수단을 선택하세요.</p>
+            <div>
+                <form name="payment">
+                    <fieldset>
+                        <label for="payment">인원수량</label>
+                        <input type="radio" name="pay" value="card" checked/>신용카드
+                        <input type="radio" name="pay" value="cash"/>무통장입금
+                    </fieldset>
+                </form>
+            </div>
+            <div class="rBtnWrap">
+                <div class="r4BtnPrev"><a href="#reserve3">이전</a></div>
+                <div class="r4BtnNext"><a href="#">결제하기</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./js/script.js"></script>
+</body>
+</html>

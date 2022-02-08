@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=""/>
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <title>공연일정</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+    <link href="./css/sub.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header id="header">
+    <div class="headWarp">
+        <div class="allMn" id="mallMn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mallMn" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <h1><a href="./index.html"><img src="./images/logo.svg" alt="LOGO" /></a></h1>
+        <ul class="gnb">
+            <li class="gnbMnUtil">
+                <ul class="gnbMnUtilCon">
+                    <li><a href="./jl1.html">로그인</a></li>
+                    <li><a href="./j1.html">회원가입</a></li>
+                    <li><a href="./u1.html">마이페이지</a></li>
+                    <li><a href="javascript:program();">두다아트센터 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./a1.html">두다재단</a>
+                <ul class="submenu">
+                    <li><a href="./a1.html">소개</a></li>
+                    <li><a href="./a2.html">시설안내</a></li>
+                    <li><a href="./a3.html">좌석배치도</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">공연</a>
+                <ul class="submenu">
+                    <li><a href="./sg1.html">공연 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">전시</a>
+                <ul class="submenu">
+                    <li><a href="./sg1.html">전시 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./l1.html">대관</a>
+                <ul class="submenu">
+                    <li><a href="./l1.html">대관 안내</a></li>
+                </ul>
+            </li>
+            <li><a href="./m1_1.html">창작자 지원</a>
+                <ul class="submenu">
+                    <li><a href="./m1_1.html">창작 예술상</a></li>
+                    <li><a href="./m1_2.html">DOODA ARTIST</a></li>
+                </ul>
+            </li>
+            <li><a href="./c1_1.html">고객센터</a>
+                <ul class="submenu">
+                    <li><a href="./c1_1.html">공지사항</a></li>
+                    <li><a href="./c1_2.html">자주묻는 질문</a></li>
+                    <li><a href="./c1_3.html">회원/예매안내</a></li>
+                    <li><a href="./c1_4.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="util">
+            <li><a href="./u1.html"><img src="./images/top_icon01.png" alt="myPage" /></a></li>
+            <li><a href="./c1_4.html"><img src="./images/top_icon02.png" alt="contact" /></a></li>
+            <li><a href="javascript:program();"><img src="./images/top_icon03.png" alt="list" /></a></li>
+            <li><a href="#."><img src="./images/top_icon04.png" alt="en" /></a></li>
+            <li><a href="#"><img src="./images/top_icon05.png" alt="serach" /></a></li>
+        </ul>
+    </div>
+</header>
+<div class="allMnwarp">
+    <div>
+        <div class="allMnUtil">
+            <ul class="allMnUtilCon">
+                <li><a href="./jl1.html">로그인</a></li>
+                <li><a href="./j1.html">회원가입</a></li>
+                <li><a href="./u1.html">마이페이지</a></li>
+                <li><a href="javascript:program();">두다아트센터 일정</a></li>
+            </ul>
+        </div>
+        <ul class="allMnGnb">
+            <li><a href="./a1.html">두다재단</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./a1.html">소개</a></li>
+                    <li><a href="./a2.html">시설안내</a></li>
+                    <li><a href="./a3.html">좌석배치도</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">공연</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./sg1.html">공연 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">전시</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./sg1.html">전시 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./l1.html">대관</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./l1.html">대관 안내</a></li>
+                </ul>
+            </li>
+            <li><a href="./m1_1.html">창작자 지원</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./m1_1.html">창작 예술상</a></li>
+                    <li><a href="./m1_2.html">DOODA ARTIST</a></li>
+                </ul>
+            </li>
+            <li><a href="./c1_1.htm">고객센터</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./c1_1.html">공지사항</a></li>
+                    <li><a href="./c1_2.html">자주묻는 질문</a></li>
+                    <li><a href="./c1_3.html">회원/예매안내</a></li>
+                    <li><a href="./c1_4.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="search">
+    <div class="searchWrap">
+        <form method="" action="" name="sch">
+            <input type="text" name="t_sch" value="" placeholder="검색어를 입력하세요." class="schTxt"/>
+            <input type="image" src="./images/search.png" alt="검색" class="schImg">
+        </form>
+        <div class="btn_close">x 닫기</div>
+    </div>
+</div>
+
+<div class="pageWarp">
+<section class="pageTit">
+<h2>페이지타이틀</h2>
+    <h3>공연일정</h3>
+    <p>공연<img src="./images/page_arr.png" alt="page_arr" /><span>공연일정</span></p>
+    <hr class="titLine"/>
+</section>
+
+<section id="List">
+<h2>공연리스트</h2>
+    <div clsss="listWarp" style="display: flex; flex-wrap: wrap;">
+        <!--.listWarp CSS에 display: flex 적용 안되어서 임시로 인라인스타일 style="display: flex;" 로 적용-->
+        <div class="perform">
+            <ul class="inner">
+                <li>
+                    <img src="./images/list_thumb1.jpg" alt="thumb" />
+                </li>
+                <li>
+                    <p class="pfGenre">뮤지컬</p>
+                    <h4>레베카</h4>
+                    <p class="pfTime">170분</p>
+                    <p class="pfPlace">
+                        두다홀<br/>
+                        <span class="pfDay">2022. 01. 01 ~ 2022. 01. 31</span>
+                    </p>
+                    <div class="listBtn">
+                        <a href="#" onclick="resev()"><img src="./images/icon_ticketr.png" alt="ticket" /><img src="./images/icon_ticket_on.png" alt="ticketon" /><br/>예매하기</a>
+                        <a href="./sg2.html"><img src="./images/icon_detail.png" alt="detail" /><img src="./images/icon_detail_on.png" alt="detailon" /><br/>상세보기</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+        <div class="perform">
+            <ul class="inner">
+                <li>
+                    <img src="./images/list_thumb2.jpg" alt="thumb" />
+                </li>
+                <li>
+                    <p class="pfGenre">연극</p>
+                    <h4>엘리펀트 송</h4>
+                    <p class="pfTime">90분</p>
+                    <p class="pfPlace">
+                        SRAT 1618<br/>
+                        <span class="pfDay">2022. 01. 01 ~ 2022. 01. 31</span>
+                    </p>
+                    <div class="listBtn">
+                        <a href="#" onclick="resev()"><img src="./images/icon_ticketr.png" alt="ticket" /><img src="./images/icon_ticket_on.png" alt="ticketon" /><br/>예매하기</a>
+                        <a href="./sg2.html"><img src="./images/icon_detail.png" alt="detail" /><img src="./images/icon_detail_on.png" alt="detailon" /><br/>상세보기</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+        <div class="perform">
+            <ul class="inner">
+                <li>
+                    <img src="./images/list_thumb3.jpg" alt="thumb" />
+                </li>
+                <li>
+                    <p class="pfGenre">뮤지컬</p>
+                    <h4>리지</h4>
+                    <p class="pfTime">170분</p>
+                    <p class="pfPlace">
+                        두다홀<br/>
+                        <span class="pfDay">2022. 01. 01 ~ 2022. 01. 31</span>
+                    </p>
+                    <div class="listBtn">
+                        <a href="#" onclick="resev()"><img src="./images/icon_ticketr.png" alt="ticket" /><img src="./images/icon_ticket_on.png" alt="ticketon" /><br/>예매하기</a>
+                        <a href="./sg2.html"><img src="./images/icon_detail.png" alt="detail" /><img src="./images/icon_detail_on.png" alt="detailon" /><br/>상세보기</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+        <div class="perform">
+            <ul class="inner">
+                <li>
+                    <img src="./images/list_thumb4.jpg" alt="thumb" />
+                </li>
+                <li>
+                    <p class="pfGenre">음악</p>
+                    <h4>추다혜 신작</h4>
+                    <p class="pfTime">90분</p>
+                    <p class="pfPlace">
+                        SRAT 1618<br/>
+                        <span class="pfDay">2022. 01. 01 ~ 2022. 01. 31</span>
+                    </p>
+                    <div class="listBtn">
+                        <a href="#" onclick="resev()"><img src="./images/icon_ticketr.png" alt="ticket" /><img src="./images/icon_ticket_on.png" alt="ticketon" /><br/>예매하기</a>
+                        <a href="./sg2.html"><img src="./images/icon_detail.png" alt="detail" /><img src="./images/icon_detail_on.png" alt="detailon" /><br/>상세보기</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+        <div class="perform">
+            <ul class="inner">
+                <li>
+                    <img src="./images/list_thumb1.jpg" alt="thumb" />
+                </li>
+                <li>
+                    <p class="pfGenre">뮤지컬</p>
+                    <h4>레베카</h4>
+                    <p class="pfTime">170분</p>
+                    <p class="pfPlace">
+                        두다홀<br/>
+                        <span class="pfDay">2022. 01. 01 ~ 2022. 01. 31</span>
+                    </p>
+                    <div class="listBtn">
+                        <a href="#" onclick="resev()"><img src="./images/icon_ticketr.png" alt="ticket" /><img src="./images/icon_ticket_on.png" alt="ticketon" /><br/>예매하기</a>
+                        <a href="./sg2.html"><img src="./images/icon_detail.png" alt="detail" /><img src="./images/icon_detail_on.png" alt="detailon" /><br/>상세보기</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+        <div class="perform">
+            <ul class="inner">
+                <li>
+                    <img src="./images/list_thumb2.jpg" alt="thumb" />
+                </li>
+                <li>
+                    <p class="pfGenre">연극</p>
+                    <h4>엘리펀트 송</h4>
+                    <p class="pfTime">90분</p>
+                    <p class="pfPlace">
+                        SRAT 1618<br/>
+                        <span class="pfDay">2022. 01. 01 ~ 2022. 01. 31</span>
+                    </p>
+                    <div class="listBtn">
+                        <a href="#" onclick="resev()"><img src="./images/icon_ticketr.png" alt="ticket" /><img src="./images/icon_ticket_on.png" alt="ticketon" /><br/>예매하기</a>
+                        <a href="./sg2.html"><img src="./images/icon_detail.png" alt="detail" /><img src="./images/icon_detail_on.png" alt="detailon" /><br/>상세보기</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+        <div class="perform">
+            <ul class="inner">
+                <li>
+                    <img src="./images/list_thumb3.jpg" alt="thumb" />
+                </li>
+                <li>
+                    <p class="pfGenre">뮤지컬</p>
+                    <h4>리지</h4>
+                    <p class="pfTime">170분</p>
+                    <p class="pfPlace">
+                        두다홀<br/>
+                        <span class="pfDay">2022. 01. 01 ~ 2022. 01. 31</span>
+                    </p>
+                    <div class="listBtn">
+                        <a href="#" onclick="resev()"><img src="./images/icon_ticketr.png" alt="ticket" /><img src="./images/icon_ticket_on.png" alt="ticketon" /><br/>예매하기</a>
+                        <a href="./sg2.html"><img src="./images/icon_detail.png" alt="detail" /><img src="./images/icon_detail_on.png" alt="detailon" /><br/>상세보기</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+        <div class="perform">
+            <ul class="inner">
+                <li>
+                    <img src="./images/list_thumb4.jpg" alt="thumb" />
+                </li>
+                <li>
+                    <p class="pfGenre">음악</p>
+                    <h4>추다혜 신작</h4>
+                    <p class="pfTime">90분</p>
+                    <p class="pfPlace">
+                        SRAT 1618<br/>
+                        <span class="pfDay">2022. 01. 01 ~ 2022. 01. 31</span>
+                    </p>
+                    <div class="listBtn">
+                        <a href="#" onclick="resev()"><img src="./images/icon_ticketr.png" alt="ticket" /><img src="./images/icon_ticket_on.png" alt="ticketon" /><br/>예매하기</a>
+                        <a href="./sg2.html"><img src="./images/icon_detail.png" alt="detail" /><img src="./images/icon_detail_on.png" alt="detailon" /><br/>상세보기</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+    </div>
+    <div class="pagenation">
+        <ul class="pager">
+            <li class="pagePrev"><a href="#">PREV</a></li>
+            <li class="pageNum"><a href="#">1</a></li>
+            <li class="pageNum"><a href="#">2</a></li>
+            <li class="pageNum"><a href="#">3</a></li>
+            <li class="pageNum"><a href="#">4</a></li>
+            <li class="pageNum"><a href="#">5</a></li>
+            <li class="pageNext"><a href="#">NEXT</a></li>
+        </ul>
+    </div>
+</section>
+</div>
+
+<footer>
+    <div>
+        <div class="btnTop"><a href="#"><img src="./images/top.png" alt="more"/> TOP</div>
+        <div class="fLink">
+            <ul class="fLinkCon">
+                <li><a href="./a1.html">DUDA</a></li>
+                <li><a href="./personal.html">개인정보처리방침 등</a></li>
+                <li><a href="javascript:openModal('emailPopup');">이메일 무단수집거부</a></li>
+                <li><a href="./ethics.html">윤리규범</a></li>
+                <li><a href="./sitemap.html">사이트맵 </a></li>
+            </ul>
+            <ul class="snsIcon">
+                <li><a href="#."><img src="./images/f_icon01.png" alt="sns1"/></a></li>
+                <li><a href="#."><img src="./images/f_icon02.png" alt="sns2"/></a></li>
+                <li><a href="#."><img src="./images/f_icon03.png" alt="sns3"/></a></li>
+                <li><a href="#."><img src="./images/f_icon04.png" alt="sns4"/></a></li>
+                <li><a href="#."><img src="./images/f_icon05.png" alt="sns5"/></a></li>
+            </ul>
+        </div>
+        <div class="fInfo">
+            <div>
+                <p>
+                    <span>두다아트재단</span><span>대표 : 홍길동</span>
+                </p>
+                <address>
+                    인천광역시 서구 서곶로 284 (우) 22711<br/>
+                    284 Seogot-ro, Seo-gu, Incheon 22711 Korea
+                </address>
+                <p>Copyright &copy; 2022 DOODA ART CENTER All Right Reserved.</p>
+            </div>
+            <div>
+                <ul>
+                    <li>고객센터</li>
+                    <li>000-000-0000</li>
+                    <li>admin@doodaartcenter.com</li>
+                </ul>
+                <p><img src="./images/logo.svg" alt="footLogo"/></p>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+<div class="emailPopBG">
+    <div id="emailPop">
+        <div class="emailPopWrap">
+            <div class="emailImg">
+                <img src="./images/emailno.png" alt="emailno" class="emailno"/>
+                <img src="./images/emailclose.png" alt="emailno" class="emailclose"/>
+            </div>
+            <div class="emailTxt">
+                <p class="epTit">이메일 무단 수집 거부</p>
+                <p class="epTxt">
+                    두다아트센터 웹사이트에 게시된 이메일주소가 <br/>
+                    전자우편 수집프로그램이나 그 밖에 기술적 장치를 <br/>
+                    이용하여 무단으로 수집되는 것을 거부하며 이를 위반 시<br/>
+                    정보통신망법에 의해 형사처벌됨을 유념하시기 바랍니다.
+                </p>
+            </div>            
+        </div>    
+    </div>
+</div>
+
+<script src="./js/script.js"></script>
+</body>
+</html>

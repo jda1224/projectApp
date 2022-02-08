@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=""/>
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <title>회원가입</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+    <link href="./css/member.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header id="header">
+    <div class="headWarp">
+        <div class="allMn" id="mallMn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mallMn" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <h1><a href="./index.html"><img src="./images/logo.svg" alt="LOGO" /></a></h1>
+        <ul class="gnb">
+            <div class="gnbMnUtil">
+                <ul class="gnbMnUtilCon">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">두다아트센터 일정</a></li>
+                </ul>
+            </div>
+            <li><a href="#">두다재단</a>
+                <ul class="submenu">
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">시설안내</a></li>
+                    <li><a href="#">좌석배치도</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">공연</a>
+                <ul class="submenu">
+                    <li><a href="./sg1.html">공연 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">전시</a>
+                <ul class="submenu">
+                    <li><a href="./sg1.html">전시 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./l1.html">대관</a>
+                <ul class="submenu">
+                    <li><a href="./l1.html">대관 안내</a></li>
+                </ul>
+            </li>
+            <li><a href="./m1_1.html">창작자 지원</a>
+                <ul class="submenu">
+                    <li><a href="./m1_1.html">창작 예술상</a></li>
+                    <li><a href="./m1_2.html">DOODA ARTIST</a></li>
+                </ul>
+            </li>
+            <li><a href="./c1_1.html">고객센터</a>
+                <ul class="submenu">
+                    <li><a href="./c1_1.html">공지사항</a></li>
+                    <li><a href="./c1_2.html">자주묻는 질문</a></li>
+                    <li><a href="./c1_3.html">회원/예매안내</a></li>
+                    <li><a href="./c1_4.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="util">
+            <li><a href="#"><img src="./images/top_icon01.png" alt="myPage" /></a></li>
+            <li><a href="#"><img src="./images/top_icon02.png" alt="contact" /></a></li>
+            <li><a href="#"><img src="./images/top_icon03.png" alt="list" /></a></li>
+            <li><a href="#"><img src="./images/top_icon04.png" alt="en" /></a></li>
+            <li><a href="#"><img src="./images/top_icon05.png" alt="serach" /></a></li>
+        </ul>
+    </div>
+</header>
+<div class="allMnwarp">
+    <div>
+        <div class="allMnUtil">
+            <ul class="allMnUtilCon">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">마이페이지</a></li>
+                <li><a href="#">두다아트센터 일정</a></li>
+            </ul>
+        </div>
+        <ul class="allMnGnb">
+            <li><a href="#">두다재단</a>
+                <ul class="allMnSubmn">
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">시설안내</a></li>
+                    <li><a href="#">좌석배치도</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">공연</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./sg1.html">공연 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./sg1.html">전시</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./sg1.html">전시 일정</a></li>
+                </ul>
+            </li>
+            <li><a href="./l1.html">대관</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./l1.html">대관 안내</a></li>
+                </ul>
+            </li>
+            <li><a href="./m1_1.html">창작자 지원</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./m1_1.html">창작 예술상</a></li>
+                    <li><a href="./m1_2.html">DOODA ARTIST</a></li>
+                </ul>
+            </li>
+            <li><a href="./c1_1.htm">고객센터</a>
+                <ul class="allMnSubmn">
+                    <li><a href="./c1_1.html">공지사항</a></li>
+                    <li><a href="./c1_2.html">자주묻는 질문</a></li>
+                    <li><a href="./c1_3.html">회원/예매안내</a></li>
+                    <li><a href="./c1_4.html">오시는 길</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="search">
+	<div class="searchWrap">
+		<form method="" action="" name="sch">
+			<input type="text" name="t_sch" value="" placeholder="검색어를 입력하세요." class="schTxt"/>
+			<input type="image" src="./images/search.png" alt="검색" class="schImg">
+		</form>
+		<div class="btn_close">x 닫기</div>
+	</div>
+</div>
+
+<div class="pageWarp">
+<section class="pageTit">
+<h2>페이지타이틀</h2>
+    <h3>회원가입</h3>
+    <p>회원가입</p>
+    <hr class="titLine"/>
+</section>
+
+<section id="joinSelec">
+    <h2>가입선택</h2>
+        <div class="joinSelecWrap">
+            <div class="warpTit">
+                <h3>가입선택</h3>
+                <p>회원가입을 하시면 두산아트센터 공연 할인혜택을 받으실 수 있습니다.
+                </p>
+                <ul class="agreeNum">
+                    <li>1</li>
+                    <li class="active">2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>    
+            </div>
+            <hr class="warpTitLine"/>
+            <div class="selecCon">
+                <div class="joinGuide">
+                    <ul>
+                        <li>두다아트센터는 만 14세 미만의 회원가입을 제한하고 있습니다.</li>
+                        <li>회원가입 시 정확한 정보를 입력해 주시기 바랍니다.</li>
+                        <li>기존 두산아트센터 회원은 간편회원 중복 가입이 불가합니다.</li>
+                        <li>간편회원 가입 시 필수정보를 입력하지 않을 경우,<br/> <span class="blank">예매/마이페이지 서비스 이용이 불가합니다.</span></li>
+                        <li>회원님의 개인정보는 항상 암호화되어 처리됩니다.</li>
+                        <li>본인인증 비용은 과금되지 않습니다.</li>
+                        <li>본인인증 시 제공되는 정보는 해당 인증기관에서 직접 수집하며,<br/> <span class="blank">인증 이외 용도로 이용 또는 저장하지 않습니다.</span></li>
+                    </ul>
+                </div>
+                <div class="joinSelec">
+                    <a href="./j4_2.html" class="joinD">두다아트센터 회원가입</a>
+                    <a href="#." class="joinN">
+                        <span><img src="./images/joinn.png" alt="joinnaver" />네이버 계정으로 회원가입</span>
+                    </a>
+                    <a href="#." class="joinK">
+                        <span><img src="./images/joink.png" alt="joinkakao" />카카오 계정으로 회원가입</span>
+                    </a>
+                    <a href="#." class="joinG">
+                        <span><img src="./images/joing.png" alt="joingoogle" />구글 계정으로 회원가입</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--
+            <div class="joinBtn">
+                <a href="./j4_2.html" class="agreeYes">다음</a>
+                <a href="#." class="agreeNo">취소</a>
+            </div>
+            -->
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div>
+        <div class="btnTop"><a href="#"><img src="./images/top.png" alt="more"/> TOP</div>
+        <div class="fLink">
+            <ul class="fLinkCon">
+                <li><a href="./a1.html">DUDA</a></li>
+                <li><a href="./personal.html">개인정보처리방침 등</a></li>
+                <li><a href="javascript:openModal('emailPopup');">이메일 무단수집거부</a></li>
+                <li><a href="./ethics.html">윤리규범</a></li>
+                <li><a href="./sitemap.html">사이트맵 </a></li>
+            </ul>
+            <ul class="snsIcon">
+                <li><a href="#."><img src="./images/f_icon01.png" alt="sns1"/></a></li>
+                <li><a href="#."><img src="./images/f_icon02.png" alt="sns2"/></a></li>
+                <li><a href="#."><img src="./images/f_icon03.png" alt="sns3"/></a></li>
+                <li><a href="#."><img src="./images/f_icon04.png" alt="sns4"/></a></li>
+                <li><a href="#."><img src="./images/f_icon05.png" alt="sns5"/></a></li>
+            </ul>
+        </div>
+        <div class="fInfo">
+            <div>
+                <p>
+                    <span>두다아트재단</span><span>대표 : 홍길동</span>
+                </p>
+                <address>
+                    인천광역시 서구 서곶로 284 (우) 22711<br/>
+                    284 Seogot-ro, Seo-gu, Incheon 22711 Korea
+                </address>
+                <p>Copyright &copy; 2022 DOODA ART CENTER All Right Reserved.</p>
+            </div>
+            <div>
+                <ul>
+                    <li>고객센터</li>
+                    <li>000-000-0000</li>
+                    <li>admin@doodaartcenter.com</li>
+                </ul>
+                <p><img src="./images/logo.svg" alt="footLogo"/></p>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+<div class="emailPopBG">
+    <div id="emailPop">
+        <div class="emailPopWrap">
+            <div class="emailImg">
+                <img src="./images/emailno.png" alt="emailno" class="emailno"/>
+                <img src="./images/emailclose.png" alt="emailno" class="emailclose"/>
+            </div>
+            <div class="emailTxt">
+                <p class="epTit">이메일 무단 수집 거부</p>
+                <p class="epTxt">
+                    두다아트센터 웹사이트에 게시된 이메일주소가 <br/>
+                    전자우편 수집프로그램이나 그 밖에 기술적 장치를 <br/>
+                    이용하여 무단으로 수집되는 것을 거부하며 이를 위반 시<br/>
+                    정보통신망법에 의해 형사처벌됨을 유념하시기 바랍니다.
+                </p>
+            </div>            
+        </div>    
+    </div>
+</div>
+
+<script src="./js/script.js"></script>
+</body>
+</html>

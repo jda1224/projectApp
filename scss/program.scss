@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import "common";
+
+body{
+    box-sizing: border-box;
+    width:840px; height: 715px;
+    overflow: hidden;
+}
+
+/*공연일정 팝업*/
+#program{
+    width:840px; height: 715px;
+    //background: #ddd;
+    //border: 1px solid black;
+    box-sizing: border-box;
+
+}
+div.tableWrap{
+    th{ 
+        box-sizing: border-box;
+        @include text(20px,$baseC,600,center,50px);
+        width:120px; height: 50px;
+        border-top: 2px solid $baseC;;
+        border-bottom: 2px solid $baseC;
+        border-right: 1px solid #ddd;
+        &:last-child{border-right:0;}
+    }
+    td{ box-sizing: border-box;
+        width:120px; height: 110px;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 5px;
+        &:last-child{border-right:0;}
+        strong{ width: inherit;
+            @include text(18px,$baseC,500,right,1);
+        }
+        ul{ margin-top: 10px;
+            li{margin-top: 5px;
+                &:first-child{margin-top: 0;}
+                @include text(14px,$baseC,400,left,20px);
+            }
+        }
+    }
+    .sunday{color:#da3621}
+    .weekday{color:$baseC;}
+    .saturday{color:#0d65ca;}
+    .pass{@include text(18px,#aaa,400,left,1);}
+}
+.musical, .theater, .gallery{
+    display: inline-block;
+    width: 20px; height: 20px;
+    @include text(13px,#fff,400,center,20px);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.musical{background: #ee1e63;}
+.theater{background: #407ef1;}
+.gallery{background: #d3a81c;}

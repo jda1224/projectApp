@@ -7,17 +7,13 @@ section{
         display: none;
     }
 }
-div>h3, section>h3{
-    @include text(30px,$baseC,600,left,1);
-}
+div>h3, section>h3{@include text(30px,$baseC,600,left,1);}
 
-#recent{
-    position: relative;
-}
+#recent{position: relative;}
 
 #mainIconMn{
     margin-top: 100px;
-    width: 90%;
+    width: 1200px;
     .iconMn{
         display: flex;
         justify-content: space-between;
@@ -40,9 +36,7 @@ div>h3, section>h3{
             li{
                 box-sizing: border-box;
                 position: relative;
-                span{
-                    @include text(16px,$gray6,400,left,30px);
-                }
+                span{@include text(16px,$gray6,400,left,30px);}
             }
         }
         .bntNotc{
@@ -102,6 +96,37 @@ footer{
                 >p:last-child{font-size: 14px;}
             }
         }
+    }
+}
+.emailPopBG{
+    display: none;
+    position:fixed;
+    z-index:1000;
+    top: 0; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    background:rgba(0,0,0,0.6);
+    #emailPop{
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+        .emailPopWrap{
+            position: relative;
+            box-sizing: border-box;
+            width:400px; height: 250px;
+            background: #fff;
+            .emailImg{
+                img{position: absolute;top:20px;}
+                .emailno{left:50%;transform: translateX(-50%);}
+                .emailclose{right:30px;
+                }
+            }    
+            .emailTxt{
+                padding-top: 20%;
+                p.epTit{@include text(22px,$baseC,600,center,1); margin: 20px 0px;}
+                p.epTxt{@include text(15px,$baseC,400,center,1.3);}
+            }
+            
+        }        
     }
 }
 
